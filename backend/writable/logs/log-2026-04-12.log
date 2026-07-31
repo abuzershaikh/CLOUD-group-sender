@@ -1,0 +1,482 @@
+CRITICAL - 2026-04-12 06:31:16 --> Error: Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 218.
+ 1 FCPATH\index.php(32): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2026-04-12 06:31:16 --> Error: Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 218.
+ 1 FCPATH\index.php(32): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2026-04-12 06:31:16 --> ErrorException: Uncaught ErrorException: Undefined property: Config\App::$allowedHostnames in D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php:248
+Stack trace:
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\antigravity ...', 248)
+#1 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+#2 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+#3 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#13 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(520): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#15 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#16 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Debug\Exceptions.php(150): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#17 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#18 {main}
+  thrown
+【Previous Exception】
+Error
+Class "Locale" not found
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\index.php(32): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH\HTTP\SiteURIFactory.php on line 248.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-12 04:31:40 --> ErrorException: Undefined property: Config\App::$allowedHostnames
+in SYSTEMPATH\HTTP\SiteURIFactory.php on line 248.
+ 1 SYSTEMPATH\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\App::$allowedHostnames', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\HTTP\\SiteURIFactory.php', 248)
+ 2 SYSTEMPATH\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+ 3 SYSTEMPATH\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+ 4 SYSTEMPATH\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+ 5 SYSTEMPATH\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', [...])
+ 8 SYSTEMPATH\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', [])
+11 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+12 SYSTEMPATH\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+13 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+14 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', [...])
+15 SYSTEMPATH\Config\Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+16 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+17 SYSTEMPATH\Config\Services.php(539): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+18 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+19 SYSTEMPATH\CodeIgniter.php(656): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+20 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+21 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:31:40 --> ErrorException: Uncaught ErrorException: Undefined property: Config\App::$allowedHostnames in D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php:248
+Stack trace:
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\antigravity ...', 248)
+#1 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+#2 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+#3 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#13 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(520): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#15 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#16 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Debug\Exceptions.php(150): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#17 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#18 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined property: Config\App::$allowedHostnames
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\antigravity ...', 248)
+#1 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+#2 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+#3 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#13 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+#15 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+#16 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(539): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#17 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+#18 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(656): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#19 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+#20 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\index.php(34): CodeIgniter\CodeIgniter->run()
+#21 {main}
+in SYSTEMPATH\HTTP\SiteURIFactory.php on line 248.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-12 04:31:51 --> TypeError: CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CodeIgniter.php(811): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:31:51 --> ErrorException: Undefined property: Config\App::$allowedHostnames
+in SYSTEMPATH\HTTP\SiteURIFactory.php on line 248.
+ 1 SYSTEMPATH\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\App::$allowedHostnames', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\HTTP\\SiteURIFactory.php', 248)
+ 2 SYSTEMPATH\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+ 3 SYSTEMPATH\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+ 4 SYSTEMPATH\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+ 5 SYSTEMPATH\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', [...])
+ 8 SYSTEMPATH\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', [])
+11 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+12 SYSTEMPATH\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+13 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+14 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', [...])
+15 SYSTEMPATH\Config\Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+16 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+17 SYSTEMPATH\Config\Services.php(539): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+18 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+19 SYSTEMPATH\CodeIgniter.php(656): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+20 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+21 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:31:51 --> ErrorException: Uncaught ErrorException: Undefined property: Config\App::$allowedHostnames in D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php:248
+Stack trace:
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\antigravity ...', 248)
+#1 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+#2 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+#3 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#13 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(520): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#15 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#16 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Debug\Exceptions.php(150): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#17 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#18 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined property: Config\App::$allowedHostnames
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\antigravity ...', 248)
+#1 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+#2 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+#3 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#13 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+#15 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+#16 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(539): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#17 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+#18 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(656): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#19 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+#20 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\index.php(34): CodeIgniter\CodeIgniter->run()
+#21 {main}
+in SYSTEMPATH\HTTP\SiteURIFactory.php on line 248.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-12 04:32:44 --> ErrorException: Undefined property: Config\App::$allowedHostnames
+in SYSTEMPATH\HTTP\SiteURIFactory.php on line 248.
+ 1 SYSTEMPATH\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\App::$allowedHostnames', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\HTTP\\SiteURIFactory.php', 248)
+ 2 SYSTEMPATH\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+ 3 SYSTEMPATH\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+ 4 SYSTEMPATH\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+ 5 SYSTEMPATH\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', [...])
+ 8 SYSTEMPATH\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', [])
+11 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+12 SYSTEMPATH\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+13 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+14 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', [...])
+15 SYSTEMPATH\Config\Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+16 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+17 SYSTEMPATH\Config\Services.php(539): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', [...])
+18 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+19 SYSTEMPATH\CodeIgniter.php(656): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+20 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+21 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:32:44 --> ErrorException: Uncaught ErrorException: Undefined property: Config\App::$allowedHostnames in D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php:248
+Stack trace:
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\antigravity ...', 248)
+#1 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+#2 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+#3 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#13 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(520): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#15 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#16 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Debug\Exceptions.php(150): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#17 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#18 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined property: Config\App::$allowedHostnames
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\antigravity ...', 248)
+#1 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+#2 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+#3 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(805): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(798): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#13 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance('request', Object(Config\App))
+#15 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App))
+#16 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\Services.php(539): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#17 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App))
+#18 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(656): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#19 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+#20 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\index.php(34): CodeIgniter\CodeIgniter->run()
+#21 {main}
+in SYSTEMPATH\HTTP\SiteURIFactory.php on line 248.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-12 04:32:44 --> Error: Undefined constant "App\Filters\DEMO"
+in APPPATH\Filters\MainFilter.php on line 13.
+ 1 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\CLIRequest), null)
+ 2 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:33:08 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Helpers\Common_helper.php(2364): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 APPPATH\Filters\MainFilter.php(48): get_session('platform')
+ 8 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\CLIRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:33:08 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Helpers\Common_helper.php(2364): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 APPPATH\Filters\MainFilter.php(48): get_session('platform')
+ 8 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:33:41 --> Error: Call to undefined method CodeIgniter\HTTP\CLIRequest::isAJAX()
+in APPPATH\Helpers\Common_helper.php on line 77.
+ 1 APPPATH\Filters\MainFilter.php(106): is_ajax()
+ 2 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\CLIRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:33:41 --> ErrorException: foreach() argument must be of type array|object, string given
+in SYSTEMPATH\HTTP\RequestTrait.php on line 78.
+ 1 SYSTEMPATH\HTTP\RequestTrait.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\HTTP\\RequestTrait.php', 78)
+ 2 SYSTEMPATH\Config\Services.php(686): CodeIgniter\HTTP\Request->getIPAddress()
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 4 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 5 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 7 APPPATH\Helpers\Common_helper.php(2364): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 8 APPPATH\Filters\MainFilter.php(48): get_session('platform')
+ 9 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:34:12 --> ErrorException: foreach() argument must be of type array|object, string given
+in SYSTEMPATH\HTTP\RequestTrait.php on line 78.
+ 1 SYSTEMPATH\HTTP\RequestTrait.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\HTTP\\RequestTrait.php', 78)
+ 2 SYSTEMPATH\Config\Services.php(686): CodeIgniter\HTTP\Request->getIPAddress()
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 4 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 5 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 7 APPPATH\Helpers\Common_helper.php(2364): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 8 APPPATH\Filters\MainFilter.php(48): get_session('platform')
+ 9 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:34:39 --> Error: Undefined constant "COREPATH"
+in APPPATH\Helpers\Common_helper.php on line 648.
+ 1 FCPATH\inc\core\Plans\Filters\beforeFilter.php(59): get_blocks('block_plans', false)
+ 2 APPPATH\Filters\MainFilter.php(130): include_once('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\core\\Plans\\Filters\\beforeFilter.php')
+ 3 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:38:03 --> Error: Undefined constant "COREPATH"
+in APPPATH\Helpers\Common_helper.php on line 648.
+ 1 FCPATH\inc\core\Plans\Filters\beforeFilter.php(59): get_blocks('block_plans', false)
+ 2 APPPATH\Filters\MainFilter.php(130): include_once('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\core\\Plans\\Filters\\beforeFilter.php')
+ 3 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:38:46 --> Error: Undefined constant "COREPATH"
+in APPPATH\Helpers\Common_helper.php on line 648.
+ 1 FCPATH\inc\core\Plans\Filters\beforeFilter.php(59): get_blocks('block_plans', false)
+ 2 APPPATH\Filters\MainFilter.php(130): include_once('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\core\\Plans\\Filters\\beforeFilter.php')
+ 3 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:40:40 --> Error: Undefined constant "COREPATH"
+in APPPATH\Helpers\Common_helper.php on line 648.
+ 1 FCPATH\inc\core\Plans\Filters\beforeFilter.php(59): get_blocks('block_plans', false)
+ 2 APPPATH\Filters\MainFilter.php(130): include_once('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\core\\Plans\\Filters\\beforeFilter.php')
+ 3 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:41:29 --> Error: Class "\File_manager\Models\File_managerModel" not found
+in APPPATH\Helpers\Common_helper.php on line 652.
+ 1 FCPATH\inc\core\Plans\Filters\beforeFilter.php(59): get_blocks('block_plans', false)
+ 2 APPPATH\Filters\MainFilter.php(130): include_once('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\core\\Plans\\Filters\\beforeFilter.php')
+ 3 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:41:43 --> Error: Class "\File_manager\Models\File_managerModel" not found
+in APPPATH\Helpers\Common_helper.php on line 652.
+ 1 FCPATH\inc\core\Plans\Filters\beforeFilter.php(59): get_blocks('block_plans', false)
+ 2 APPPATH\Filters\MainFilter.php(130): include_once('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\core\\Plans\\Filters\\beforeFilter.php')
+ 3 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:42:44 --> Error: Class "Core\D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\inc\plugins\Payment\Models\PaymentModel" not found
+in FCPATH\inc\core\Settings\Filters\beforeFilter.php on line 80.
+ 1 APPPATH\Filters\MainFilter.php(130): include_once()
+ 2 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:44:33 --> ErrorException: Undefined property: Config\Security::$csrfProtection
+in SYSTEMPATH\Security\Security.php on line 218.
+ 1 SYSTEMPATH\Security\Security.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Security::$csrfProtection', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\Security\\Security.php', 218)
+ 2 SYSTEMPATH\Security\Security.php(198): CodeIgniter\Security\Security->isCSRFCookie()
+ 3 SYSTEMPATH\Config\Services.php(653): CodeIgniter\Security\Security->__construct(Object(Config\Security))
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::security(Object(Config\Security), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('security', [...])
+ 6 SYSTEMPATH\Config\Services.php(648): CodeIgniter\Config\BaseService::getSharedInstance('security', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::security()
+ 8 SYSTEMPATH\Common.php(284): CodeIgniter\Config\BaseService::__callStatic('security', [])
+ 9 FCPATH\inc\themes\frontend\Stackblue\Views\index.php(24): csrf_hash()
+10 SYSTEMPATH\View\View.php(228): include('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\themes\\frontend\\Stackblue\\Views\\index.php')
+11 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend\\Stackblue\\Views\\index', [], true)
+13 FCPATH\inc\core\Home\Controllers\Home.php(56): view('Frontend\\Stackblue\\Views\\index', [...])
+14 SYSTEMPATH\CodeIgniter.php(943): Core\Home\Controllers\Home->index()
+15 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(Core\Home\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:44:47 --> ErrorException: Undefined property: Config\Security::$csrfProtection
+in SYSTEMPATH\Security\Security.php on line 218.
+ 1 SYSTEMPATH\Security\Security.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Security::$csrfProtection', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\vendor\\codeigniter4\\framework\\system\\Security\\Security.php', 218)
+ 2 SYSTEMPATH\Security\Security.php(198): CodeIgniter\Security\Security->isCSRFCookie()
+ 3 SYSTEMPATH\Config\Services.php(653): CodeIgniter\Security\Security->__construct(Object(Config\Security))
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::security(Object(Config\Security), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('security', [...])
+ 6 SYSTEMPATH\Config\Services.php(648): CodeIgniter\Config\BaseService::getSharedInstance('security', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::security()
+ 8 SYSTEMPATH\Common.php(284): CodeIgniter\Config\BaseService::__callStatic('security', [])
+ 9 FCPATH\inc\themes\frontend\Stackblue\Views\index.php(24): csrf_hash()
+10 SYSTEMPATH\View\View.php(228): include('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\themes\\frontend\\Stackblue\\Views\\index.php')
+11 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend\\Stackblue\\Views\\index', [], true)
+13 FCPATH\inc\core\Home\Controllers\Home.php(56): view('Frontend\\Stackblue\\Views\\index', [...])
+14 SYSTEMPATH\CodeIgniter.php(943): Core\Home\Controllers\Home->index()
+15 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(Core\Home\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 04:50:21 --> Error: Class "Google\Auth\OAuth2" not found
+in FCPATH\vendor\google\apiclient\src\Client.php on line 1064.
+ 1 FCPATH\vendor\google\apiclient\src\Client.php(1053): Google\Client->createOAuth2Service()
+ 2 FCPATH\vendor\google\apiclient\src\Client.php(404): Google\Client->getOAuth2Service()
+ 3 FCPATH\inc\core\Auth\Models\AuthModel.php(407): Google\Client->createAuthUrl()
+ 4 FCPATH\inc\core\Auth\Controllers\Auth.php(19): Core\Auth\Models\AuthModel->social_login('google')
+ 5 SYSTEMPATH\CodeIgniter.php(943): Core\Auth\Controllers\Auth->social_login('google')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(Core\Auth\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-12 10:33:00 --> ErrorException: file_put_contents(D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\inc/core/Whatsapp/Config.php): Failed to open stream: Resource temporarily unavailable
+in FCPATH\inc\core\Whatsapp\Filters\beforeFilter.php on line 156.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc/core/Whatsapp/Config.php): Failed to open stream: Resource temporarily unavailable', 'D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\core\\Whatsapp\\Filters\\beforeFilter.php', 156)
+ 2 FCPATH\inc\core\Whatsapp\Filters\beforeFilter.php(156): file_put_contents('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc/core/Whatsapp/Config.php', '<?php return array (
+  \'id\' => \'whatsapp\',
+  \'folder\' => \'core\',
+  \'name\' => \'Report\',
+  \'author\' => \'Stackcode\',
+  \'author_uri\' => \'sp\',
+  \'desc\' => \'Customize system interface\',
+  \'icon\' => \'fab fa-whatsapp\',
+  \'color\' => \'#25d366\',
+  \'show_plan\' => true,
+  \'parent\' => 
+  array (
+    \'id\' => \'features\',
+    \'name\' => \'Features\',
+  ),
+  \'js\' => 
+  array (
+    0 => \'Assets/js/whatsapp.js\',
+    1 => \'Assets/js/socketio.min.js\',
+  ),
+  \'menu\' => 
+  array (
+    \'tab\' => 2,
+    \'type\' => \'top\',
+    \'position\' => 1000,
+    \'name\' => \'Whatsapp\',
+  ),
+);')
+ 3 APPPATH\Filters\MainFilter.php(130): include_once('D:\\antigravity project\\Wazipar-20260411T150155Z-3-001\\Wazipar\\01-02-2026bt.wappbuzz.in (2)\\inc\\core\\Whatsapp\\Filters\\beforeFilter.php')
+ 4 SYSTEMPATH\Filters\Filters.php(184): App\Filters\MainFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('whatsapp_profiles/check_login/69DB263A2A067', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(34): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-04-12 11:08:27 --> mysqli_sql_exception: Unknown column 'phone' in 'field list' in D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sp...', 0)
+#1 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\inc\core\Whatsapp_livechat\Models\Whatsapp_livechatModel.php(375): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\inc\core\Whatsapp_livechat\Models\Whatsapp_livechatModel.php(299): Core\Whatsapp_livechat\Models\Whatsapp_livechatModel->updateSubscriberLastMessage('69DB263A2A067', '918779026964@s....', 'hiiii', 1775972307)
+#6 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\inc\core\Whatsapp_livechat\Controllers\Whatsapp_livechat.php(226): Core\Whatsapp_livechat\Models\Whatsapp_livechatModel->save_sent_message('69DB263A2A067', '918779026964@s....', 'hiiii', NULL, NULL)
+#7 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(943): Core\Whatsapp_livechat\Controllers\Whatsapp_livechat->send()
+#8 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(Core\Whatsapp_livechat\Controllers\Whatsapp_livechat))
+#9 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\antigravity project\Wazipar-20260411T150155Z-3-001\Wazipar\01-02-2026bt.wappbuzz.in (2)\index.php(34): CodeIgniter\CodeIgniter->run()
+#11 {main}

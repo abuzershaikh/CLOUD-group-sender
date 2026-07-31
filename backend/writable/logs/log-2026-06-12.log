@@ -1,0 +1,42 @@
+CRITICAL - 2026-06-12 10:49:39 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-06-12 10:50:12 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-06-12 11:01:31 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-06-12 11:04:18 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-06-12 18:44:08 --> Error: Class 'Google\Auth\OAuth2' not found
+in FCPATH/vendor/google/apiclient/src/Client.php on line 1064.
+ 1 FCPATH/vendor/google/apiclient/src/Client.php(1053): Google\Client->createOAuth2Service()
+ 2 FCPATH/vendor/google/apiclient/src/Client.php(404): Google\Client->getOAuth2Service()
+ 3 FCPATH/inc/core/Auth/Models/AuthModel.php(407): Google\Client->createAuthUrl()
+ 4 FCPATH/inc/core/Auth/Controllers/Auth.php(19): Core\Auth\Models\AuthModel->social_login()
+ 5 SYSTEMPATH/CodeIgniter.php(943): Core\Auth\Controllers\Auth->social_login()
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()

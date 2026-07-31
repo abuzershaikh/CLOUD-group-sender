@@ -1,0 +1,87 @@
+ERROR - 2026-04-30 07:55:07 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(615): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: Core\Admin_API\Controllers\Admin_API->Core\Admin_API\Controllers\{closure}()
+#6 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(610): array_map()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->list_group_sender_status()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2026-04-30 07:56:48 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(1067): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(615): Core\Admin_API\Controllers\Admin_API->get_group_sender_queue_row()
+#6 [internal function]: Core\Admin_API\Controllers\Admin_API->Core\Admin_API\Controllers\{closure}()
+#7 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(610): array_map()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->list_group_sender_status()
+#9 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2026-04-30 07:56:48 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(1067): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(615): Core\Admin_API\Controllers\Admin_API->get_group_sender_queue_row()
+#6 [internal function]: Core\Admin_API\Controllers\Admin_API->Core\Admin_API\Controllers\{closure}()
+#7 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(610): array_map()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->list_group_sender_status()
+#9 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2026-04-30 07:56:48 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(1067): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(615): Core\Admin_API\Controllers\Admin_API->get_group_sender_queue_row()
+#6 [internal function]: Core\Admin_API\Controllers\Admin_API->Core\Admin_API\Controllers\{closure}()
+#7 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(610): array_map()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->list_group_sender_status()
+#9 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2026-04-30 07:56:48 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(1067): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(615): Core\Admin_API\Controllers\Admin_API->get_group_sender_queue_row()
+#6 [internal function]: Core\Admin_API\Controllers\Admin_API->Core\Admin_API\Controllers\{closure}()
+#7 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(610): array_map()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->list_group_sender_status()
+#9 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2026-04-30 07:57:33 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(1067): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(656): Core\Admin_API\Controllers\Admin_API->get_group_sender_queue_row()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->get_group_sender_status_detail()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#10 {main}

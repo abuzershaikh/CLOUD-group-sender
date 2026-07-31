@@ -1,0 +1,1147 @@
+CRITICAL - 2026-07-31 14:41:18 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:20 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:21 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:23 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:24 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:24 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:25 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:25 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:26 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:29 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:29 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:34 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:35 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:36 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:39 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:39 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:44 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:49 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:54 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:54 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:41:59 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:02 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:03 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:04 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:04 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:09 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:09 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:09 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:14 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:19 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:24 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:29 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:30 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:32 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:33 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:34 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:34 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:34 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:38 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:39 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:39 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:40 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:43 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:44 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:46 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:49 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:50 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:51 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:54 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:55 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:56 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:58 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:59 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:42:59 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:00 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:03 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:04 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:04 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:06 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:08 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:09 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:09 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:10 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:14 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:14 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:19 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:19 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:19 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:21 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:24 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:24 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:29 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:29 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:34 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:34 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:37 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:38 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:39 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:39 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:41 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:43 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:44 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:49 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:50 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:53 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:53 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:54 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:43:59 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:04 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:09 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:14 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:19 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:24 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:29 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:34 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:39 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:44 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:49 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:54 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:44:59 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:04 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:09 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:14 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:19 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:24 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:29 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:34 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:39 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:44 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:50 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:54 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:45:59 --> ParseError: syntax error, unexpected '" delay_seconds => ,' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 505.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-31 14:46:04 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-31 14:46:09 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-31 14:46:14 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-31 14:46:19 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-31 14:46:24 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-31 14:46:29 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-31 14:46:34 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-31 14:46:39 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-31 14:46:44 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

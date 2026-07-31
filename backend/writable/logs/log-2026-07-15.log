@@ -1,0 +1,57 @@
+CRITICAL - 2026-07-15 20:35:30 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-15 20:36:07 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-15 20:42:23 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-15 21:03:48 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-15 21:08:26 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-07-15 21:09:01 --> Language.invalidMessageFormat: $message: "Controller or its method is not found: {0}::{1}", $args: "\Core\Home\Controllers\À", "index" (urlencoded: "%5CCore%5CHome%5CControllers%5C%C0", "index"), MessageFormatter Error: "Invalid UTF-8 data in string argument: '\Core\Home\Controllers\À': U_INVALID_CHAR_FOUND" (10)
+CRITICAL - 2026-07-15 21:10:04 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-15 21:10:10 --> ErrorException: file_put_contents(/var/www/wappbuzz/test.txt): failed to open stream: Permission denied
+in FCPATH/inc/plugins/Payment/Controllers/Payment.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/inc/plugins/Payment/Controllers/Payment.php(7): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(915): Plugins\Payment\Controllers\Payment->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()

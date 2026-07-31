@@ -1,0 +1,60 @@
+CRITICAL - 2026-07-19 11:13:39 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:19:16 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:23:47 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:23:54 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:45:55 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:47:08 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:47:50 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:49:02 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:49:04 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:49:05 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:49:35 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 11:50:53 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:08:35 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:09:21 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:36:48 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:56:40 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:56:47 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:56:47 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 12:57:05 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-19 13:03:05 --> ErrorException: Cannot redeclare hideEmailAddress() (previously declared in /var/www/wappbuzz/app/Helpers/Common_helper.php:46)
+in APPPATH/Helpers/Common_helper.php.bak.20260719_163235 on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

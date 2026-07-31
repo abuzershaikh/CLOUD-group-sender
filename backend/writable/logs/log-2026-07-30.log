@@ -1,0 +1,1194 @@
+ERROR - 2026-07-30 10:57:11 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(757): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->start_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 10:57:53 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(502): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 10:57:53 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(521): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(502): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(521): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(502): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(521): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(502): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(521): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(502): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(521): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(502): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(521): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(502): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:00:18 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(521): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:02:04 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(502): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:02:04 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(521): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:08:48 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(504): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:08:48 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(525): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:10:57 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(504): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:10:57 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(525): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:11:11 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(504): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:11:11 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(525): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:16:05 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(504): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:16:05 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(525): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:21:29 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(504): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:21:29 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(525): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:21:32 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(504): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:21:32 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(525): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:27:00 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(504): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:27:00 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(525): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:28:06 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(504): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:28:06 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(525): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:33:24 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:33:24 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:34:31 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:34:31 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:35:27 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:35:27 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:35:27 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:35:27 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:39:21 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:39:21 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:41:37 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:41:37 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:42:40 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:42:40 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:43:33 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:43:33 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:47:40 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 11:47:40 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:01:17 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:01:17 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:02:00 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:02:00 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:02:37 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:02:37 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:03:44 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:03:44 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:03:58 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:03:58 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:04:29 --> mysqli_sql_exception: Unknown column 'total_count' in 'field list' in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(506): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:04:29 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:04:44 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:05:13 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:05:30 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:05:57 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:06:07 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:07:52 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:08:10 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(527): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:08:32 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(529): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:08:55 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(529): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:09:36 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(529): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:10:24 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(529): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-07-30 12:10:40 --> ParseError: syntax error, unexpected 'catch' (T_CATCH)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 545.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 12:10:57 --> ParseError: syntax error, unexpected 'catch' (T_CATCH)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 545.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 12:11:23 --> ParseError: syntax error, unexpected 'catch' (T_CATCH)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 537.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 12:15:51 --> ParseError: syntax error, unexpected 'catch' (T_CATCH)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 537.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-07-30 12:17:03 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(528): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:17:46 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(528): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:18:02 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(528): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 12:18:18 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(528): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->bulk_create_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 18:21:22 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(715): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->stop_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 18:21:30 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(715): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->stop_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 18:21:59 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(834): CodeIgniter\Database\BaseBuilder->delete()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->delete_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2026-07-30 18:25:02 --> mysqli_sql_exception: Table 'wappbuzz.android_campaign_queue' doesn't exist in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/inc/core/Admin_API/Controllers/Admin_API.php(715): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(943): Core\Admin_API\Controllers\Admin_API->stop_campaign()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-07-30 20:03:02 --> ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 734.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:03:02 --> ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 734.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:03:06 --> ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 734.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:03:07 --> ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 734.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:03:10 --> ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 734.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:03:12 --> ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 734.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:03:14 --> ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 734.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:03:16 --> ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 734.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:06 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:07 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:10 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:12 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:15 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:16 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:18 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:21 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-07-30 20:04:22 --> ParseError: syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in FCPATH/inc/core/Admin_API/Controllers/Admin_API.php on line 548.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(901): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()

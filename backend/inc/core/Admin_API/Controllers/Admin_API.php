@@ -1,0 +1,1800 @@
+<?php
+
+namespace Core\Admin_API\Controllers;
+
+use CodeIgniter\API\ResponseTrait;
+use CodeIgniter\Controller;
+use Error;
+
+class Admin_API extends Controller
+{
+    use ResponseTrait;
+    public string $api_key;
+    private string $default_mobile_template_access_token = '692fbc0826bbd';
+
+    public function __construct()
+    {
+        $this->config = parse_config(include realpath(__DIR__ . "/../Config.php"));
+        $this->class_name = get_class_name($this);
+        $this->model = new \Core\Admin_API\Models\Admin_APIModel();
+        $this->api_key = get_option("admin_api_key", "asg12345");
+    }
+
+    public function index($page = false)
+    {
+        if (!permission("admin_api")) {
+            redirect_to(base_url());
+        }
+
+        $api_key = $this->api_key;
+
+        $data = [
+            "title" => $this->config['name'],
+            "desc" => $this->config['desc'],
+            "content" => view('Core\Admin_API\Views\content', ['api_key' => $api_key, "config" => $this->config]),
+            "api_key" => $api_key
+        ];
+
+        return view('Core\Admin_API\Views\index', $data);
+    }
+
+
+    public function get_users()
+    {
+        try {
+            $this->check_api_key();
+            $current_page = (int) ((post("page") ?? 1) - 1);
+            $per_page = (int) (post("per_page") ?? 20);
+            $total_items = post("total_items");
+
+            $total_items = $this->model->get_list(false);
+            $result = $this->model->get_list(true);
+            $data = [
+                "status" => "success",
+                "data" => $result,
+                "total_items" => $total_items,
+                "per_page" => $per_page,
+                "current_page" => $current_page + 1,
+            ];
+            return $this->respond($data, 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function create_user()
+    {
+        try {
+
+            $iData = (array) json_decode(file_get_contents("php://input"));
+
+            $username = $iData['username'] ?? null;
+            $fullname = $iData['fullname'] ?? null;
+            $email = $iData['email'] ?? null;
+            $role = (int) ($iData['role'] ?? 0);
+            $password = $iData['passssword'] ?? explode("@", $email)[0] . '_' . date("Ym");
+            $expired_date = $iData['expired_date'] ?? null;
+            $timezone = $iData['timezone'] ?? "America/Mexico_City";
+            $plan_id = $iData['plan_id'] ?? null;
+            ;
+            $is_admin = (int) ($iData['is_admin'] ?? 0);
+            $status = (int) ($iData['status'] ?? 2);
+
+            $this->val_par("null", __("email"), $email);
+            $this->val_par("email", "email", $email);
+            $this->val_par("null", __("username"), $username);
+            $this->val_par("null", __("fullname"), $fullname);
+            $this->val_par("null", __("timezone"), $timezone);
+            $this->val_par("null", __("expired_date"), $expired_date);
+            $this->val_par('min_length', __('Password'), $password, 6);
+
+            $email_check = db_get('id', TB_USERS, ["email" => $email]);
+            $this->val_par('not_empty', __('This email already exists'), $email_check);
+            $username_check = db_get("id", TB_USERS, ['username' => $username]);
+            $this->val_par('not_empty', __('This username already exists'), $username_check);
+            $plan_check = db_get("*", TB_PLANS, ['id' => $plan_id]);
+            $this->val_par('empty', __('This plan not exists'), $plan_check);
+
+            $avatar = save_img(get_avatar($fullname), WRITEPATH . 'avatar/');
+
+            // $expired_date = date("Y-m-d", strtotime($expired_date));
+            $password = md5($password);
+
+            $expired_date = $expired_date ? strtotime(date_sql($expired_date)) : 0;
+
+            $id = db_insert(TB_USERS, [
+                "ids" => ids(),
+                "is_admin" => $is_admin,
+                "role" => $role,
+                "fullname" => $fullname,
+                "username" => $username,
+                "email" => $email,
+                "password" => md5($password),
+                "plan" => $plan_id,
+                "expiration_date" => $expired_date,
+                "timezone" => $timezone,
+                "login_type" => 'direct',
+                "avatar" => $avatar,
+                "status" => $status,
+                "changed" => time(),
+                "created" => time()
+            ]);
+
+            db_insert(TB_TEAM, [
+                "ids" => ids(),
+                "owner" => $id,
+                "pid" => $plan_id,
+                "permissions" => $plan_check->permissions
+            ]);
+
+
+            return $this->respond(["status" => "success", "message" => "success"], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function update_user()
+    {
+        try {
+            $this->check_api_key();
+            $user_email = post('user');
+            $this->val_par('null', 'user', $user_email);
+
+            $user = db_get('*', TB_USERS, ["email" => $user_email]);
+            $this->val_par('empty', __('User not found'), $user, '', 404);
+
+            $iData = (array) json_decode(file_get_contents("php://input"));
+
+            $username = $iData['username'] ?? $user->username;
+            $fullname = $iData['fullname'] ?? $user->fullname;
+            $email = $iData['email'] ?? $user->email;
+            $role = (int) ($iData['role'] ?? $user->role);
+            $password = $iData['passssword'] ?? null;
+            $expired_date = $iData['expired_date'] ?? date("Y-m-d", $user->expiration_date);
+            $timezone = $iData['timezone'] ?? $user->timezone;
+            $plan_id = $iData['plan_id'] ?? $user->plan;
+            ;
+            $is_admin = (int) ($iData['is_admin'] ?? $user->is_admin);
+            $status = (int) ($iData['status'] ?? $user->status);
+
+
+            $email_check = db_get("*", TB_USERS, ['email' => $email, 'id != ' => $user->id]);
+            $this->val_par('not_empty', __('This email already exists'), $email_check);
+            $username_check = db_get("*", TB_USERS, ['username' => $username, 'id != ' => $user->id]);
+            $this->val_par('not_empty', __('This username already exists'), $username_check);
+
+            if ($plan_id != $user->plan) {
+                $plan_check = db_get("*", TB_PLANS, ['id' => $plan_id]);
+                $this->val_par('empty', __('This plan not exists'), $plan_check);
+            }
+
+            $data = [
+                "is_admin" => $is_admin,
+                "role" => $role,
+                "fullname" => $fullname,
+                "username" => $username,
+                "email" => $email,
+                "plan" => $plan_id,
+                "expiration_date" => $expired_date ? strtotime(date_sql($expired_date)) : 0,
+                "timezone" => $timezone,
+                "status" => $status,
+                "changed" => time()
+            ];
+
+            if ($password && $password != "") {
+                $data['password'] = md5($password);
+            }
+
+            db_update(TB_USERS, $data, ["id" => $user->id]);
+
+            if ($plan_id != $user->plan) {
+                $team = db_get("*", TB_TEAM, ["owner" => $user->id]);
+                update_team_data("number_accounts", $plan_check->number_accounts, $team->id);
+
+                db_update(
+                    TB_TEAM,
+                    [
+                        "permissions" => $plan_check->permissions,
+                        "pid" => $plan_check->id
+                    ],
+                    [
+                        "owner" => $user->id
+                    ]
+                );
+            }
+
+
+            return $this->respond(["status" => "success", "message" => "success"], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function delete_user()
+    {
+        try {
+            $this->check_api_key();
+            $user_email = post('user');
+            $this->val_par('null', 'user', $user_email);
+            $user = db_get('*', TB_USERS, ["email" => $user_email]);
+            $this->val_par('empty', __('User not found'), $user, '', 404);
+
+            if (!$user->is_admin) {
+                db_delete(TB_USERS, ['id' => $user->id]);
+                return $this->respond(["status" => "success", "message" => "success"], 200);
+            } else {
+                throw new Error("admin user can't be delete", 400);
+            }
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function create_button_template()
+    {
+        try {
+            $this->check_api_key();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+
+            // ??? Autofill Mapping ???????????????????????????????????????????
+            // Android sirf yeh fields bheje, baaki auto handle hogi
+            $access_token = $iData['access_token'] ?? null;  // Team ka access_token
+            $name = $iData['name'] ?? null;  // Template ka naam
+            $title = $iData['title'] ?? '';    // Title (optional)
+            $desc = $iData['desc'] ?? null;  // Main description
+            $footer = $iData['footer'] ?? '';    // Footer (optional)
+            $buttons = $iData['buttons'] ?? [];    // Button list array
+            // ????????????????????????????????????????????????????????????????
+
+            // Validate
+            $this->val_par('null', 'name', $name);
+            $this->val_par('null', 'desc', $desc);
+            $this->val_par('null', 'access_token', $access_token);
+
+            if (empty($buttons)) {
+                return $this->respond(['status' => 'error', 'message' => 'Add at least one button'], 400);
+            }
+            if (count($buttons) > 3) {
+                return $this->respond(['status' => 'error', 'message' => 'Max 3 buttons allowed'], 400);
+            }
+
+            // Team lookup from access_token
+            $db = \Config\Database::connect();
+            $team = $db->table('sp_team')->where('ids', $access_token)->get()->getRow();
+            if (!$team) {
+                return $this->respond(['status' => 'error', 'message' => 'Invalid access_token'], 401);
+            }
+
+            // ??? Button Mapping (Auto-Select) ???????????????????????????????
+            $item_buttons = [];
+            foreach ($buttons as $idx => $btn) {
+                $type = strtolower($btn['type'] ?? 'text');
+                $displayText = $btn['display_text'] ?? '';
+                $url = $btn['url'] ?? '';
+                $phone = $btn['phone'] ?? '';
+                $copy_code = $btn['copy_code'] ?? '';
+
+                if ($displayText === '') {
+                    return $this->respond(['status' => 'error', 'message' => "Button " . ($idx + 1) . ": display_text required"], 400);
+                }
+
+                switch ($type) {
+                    case 'text':
+                        $item_buttons[] = [
+                            "index" => $idx + 1,
+                            "quickReplyButton" => [
+                                "displayText" => $displayText,
+                                "id" => uniqid()
+                            ]
+                        ];
+                        break;
+
+                    case 'url':
+                        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+                            return $this->respond(['status' => 'error', 'message' => "Button " . ($idx + 1) . ": invalid URL"], 400);
+                        }
+                        $item_buttons[] = [
+                            "index" => $idx + 1,
+                            "urlButton" => [
+                                "displayText" => $displayText,
+                                "url" => $url
+                            ]
+                        ];
+                        break;
+
+                    case 'call':
+                        if (empty($phone)) {
+                            return $this->respond(['status' => 'error', 'message' => "Button " . ($idx + 1) . ": phone required"], 400);
+                        }
+                        $item_buttons[] = [
+                            "index" => $idx + 1,
+                            "callButton" => [
+                                "displayText" => $displayText,
+                                "phoneNumber" => $phone
+                            ]
+                        ];
+                        break;
+
+                    case 'copy':
+                        if (empty($copy_code)) {
+                            return $this->respond(['status' => 'error', 'message' => "Button " . ($idx + 1) . ": copy_code required"], 400);
+                        }
+                        $item_buttons[] = [
+                            "index" => $idx + 1,
+                            "urlButton" => [
+                                "displayText" => $displayText,
+                                "url" => "https://www.whatsapp.com/otp/code/?otp_type=COPY_CODE&code=" . urlencode($copy_code),
+                                "disabled" => false
+                            ]
+                        ];
+                        break;
+
+                    default:
+                        return $this->respond(['status' => 'error', 'message' => "Button " . ($idx + 1) . ": unknown type '$type'"], 400);
+                }
+            }
+
+            // Build final template JSON
+            $btn_template = ["templateButtons" => $item_buttons];
+            if ($footer !== '')
+                $btn_template["footer"] = $footer;
+            if ($title !== '')
+                $btn_template["title"] = $title;
+            $btn_template["text"] = $desc;
+
+            $new_ids = bin2hex(random_bytes(6));
+
+            $db->table('sp_whatsapp_template')->insert([
+                "ids" => $new_ids,
+                "team_id" => $team->id,
+                "type" => 2,
+                "name" => $name,
+                "data" => json_encode($btn_template, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+                "changed" => time(),
+                "created" => time(),
+            ]);
+
+            return $this->respond([
+                "status" => "success",
+                "message" => "Button template created",
+                "template_id" => $new_ids
+            ], 200);
+
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function list_button_templates()
+    {
+        try {
+            $this->check_api_key();
+
+            $access_token = post('access_token');
+            $this->val_par('null', 'access_token', $access_token);
+
+            $db = \Config\Database::connect();
+            $team = $db->table('sp_team')->where('ids', $access_token)->get()->getRow();
+            if (!$team) {
+                return $this->respond(['status' => 'error', 'message' => 'Invalid access_token'], 401);
+            }
+
+            $templates = $db->table('sp_whatsapp_template')
+                ->where('team_id', $team->id)
+                ->where('type', 2)
+                ->orderBy('created', 'DESC')
+                ->get()->getResult();
+
+            return $this->respond([
+                "status" => "success",
+                "data" => $templates
+            ], 200);
+
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function bulk_create_campaign()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = $iData["access_token"] ?? null;
+            $campaigns = $iData["campaigns"] ?? [];
+
+            $this->val_par("null", "access_token", $access_token);
+            if (empty($campaigns) || !is_array($campaigns)) {
+                return $this->respond(["status" => "error", "message" => "campaigns array is required"], 400);
+            }
+
+            $db = \Config\Database::connect();
+            $team = $db->table("sp_team")->where("ids", $access_token)->get()->getRow();
+            if (!$team) {
+                return $this->respond(["status" => "error", "message" => "Invalid access_token"], 401);
+            }
+
+            $createdCampaignIds = [];
+            
+            $db->transStart();
+            
+            foreach ($campaigns as $campaign) {
+                $instance_id = $campaign["instance_id"] ?? "";
+                $campaign_name = $campaign["campaign_name"] ?? "";
+                $recipients = $campaign["recipients"] ?? [];
+                $payload = $campaign["payload"] ?? [];
+                $delay_seconds = (int)($campaign["delay_seconds"] ?? 0);
+                $message_mode = $campaign["message_mode"] ?? "group_text";
+                $message_label = $campaign["message_label"] ?? "Group Text";
+                
+                if (empty($instance_id) || empty($campaign_name) || empty($recipients)) {
+                    continue; // Skip invalid campaigns
+                }
+                
+                $session = $db->table("sp_whatsapp_sessions")
+                    ->where("instance_id", $instance_id)
+                    ->where("team_id", $team->id)
+                    ->get()->getRow();
+                    
+                if (!$session) {
+                    continue; // Skip invalid session
+                }
+                
+                // Normalize recipients
+                $normalizedRecipients = [];
+                foreach ($recipients as $idx => $recipient) {
+                    if (is_string($recipient)) { $recipient = ['chat_id' => $recipient, 'number' => $recipient, 'is_group' => true]; }
+                    $number = trim((string)($recipient["number"] ?? ""));
+                    $chatId = trim((string)($recipient["chat_id"] ?? ""));
+                    $isGroup = !empty($recipient["is_group"]) || strpos($chatId, "g.us") !== false || strpos($number, "g.us") !== false;
+                    
+                    if ($isGroup) {
+                        $chatId = $chatId ?: $number;
+                        if (empty($chatId)) continue;
+                        if (strpos($chatId, "g.us") !== false && strpos($chatId, "@") === false) {
+                            $chatId = str_replace("g.us", "@g.us", $chatId);
+                        }
+                        $number = $chatId;
+                    } else {
+                        $number = preg_replace("/\D/", "", $number);
+                        if (empty($number)) continue;
+                    }
+                    
+                    $normalizedRecipients[] = [
+                        "index" => (int)($recipient["index"] ?? ($idx + 1)),
+                        "name" => trim((string)($recipient["name"] ?? "")),
+                        "number" => $number,
+                        "chat_id" => $chatId,
+                        "is_group" => $isGroup,
+                        "status" => "queued",
+                        "error" => ""
+                    ];
+                }
+                
+                if (empty($normalizedRecipients)) {
+                    continue;
+                }
+                
+                $hasOnlyGroupRecipients = true;
+                foreach ($normalizedRecipients as $rec) {
+                    if (!$rec["is_group"]) {
+                        $hasOnlyGroupRecipients = false;
+                        break;
+                    }
+                }
+                
+                $finalDelay = $delay_seconds;
+                
+                $uniqueId = uniqid("cmp_");
+                
+                // Insert into Status table
+                $res2 = $db->table("sp_android_campaign_status")->insert([
+                    "ids" => $uniqueId,
+                    "team_id" => $team->id,
+                    "instance_id" => $instance_id,
+                    "campaign_name" => $campaign_name,
+                    "target_count" => count($normalizedRecipients),
+                    "sent_count" => 0,
+                    "failed_count" => 0,
+                    "message_mode" => $message_mode,
+                    "message_label" => $message_label,
+                    "delay_seconds" => $finalDelay,
+                    "status" => "queued",
+                    "created" => time(),
+                    "changed" => time()
+                ]);
+                
+                // Insert into Queue table
+                $res1 = $db->table("sp_android_campaign_queue")->insert([
+                    "ids" => $uniqueId,
+                    "history_ids" => $uniqueId,
+                    "team_id" => $team->id,
+                    "instance_id" => $instance_id,
+                    "campaign_name" => $campaign_name,
+                    "target_count" => count($normalizedRecipients),
+                    "payload" => json_encode($payload, JSON_UNESCAPED_UNICODE),
+                    "recipients" => json_encode($normalizedRecipients, JSON_UNESCAPED_UNICODE),
+                    "current_index" => 0,
+                    "sent_count" => 0,
+                    "failed_count" => 0,
+                    "message_mode" => $message_mode,
+                    "message_label" => $message_label,
+                    "delay_seconds" => $finalDelay,
+                    "status" => "queued",
+                    "next_run_at" => time(),
+                    "created" => time(),
+                    "changed" => time()
+                ]);
+                
+                $createdCampaignIds[] = $uniqueId;
+            }
+            
+            $db->transComplete();
+
+            file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); if ($db->transStatus() === false) {
+                file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true));
+                return $this->respond(["status" => "error", "message" => "Database transaction failed"], 500);
+            }
+
+            return $this->respond([
+                "status" => "success",
+                "message" => "Bulk campaigns created",
+                "campaign_ids" => $createdCampaignIds
+            ], 200);
+
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function create_campaign()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = $iData['access_token'] ?? null;
+            $instance_id = $iData['instance_id'] ?? '';
+            $campaign_name = $iData['campaign_name'] ?? '';
+            $recipients = $iData['recipients'] ?? [];
+            $payload = $iData['payload'] ?? [];
+            $delay_seconds = (int)($iData['delay_seconds'] ?? 0);
+
+            $this->val_par('null', 'access_token', $access_token);
+            $this->val_par('null', 'instance_id', $instance_id);
+            $this->val_par('null', 'campaign_name', $campaign_name);
+            
+            if (empty($recipients)) {
+                return $this->respond(['status' => 'error', 'message' => 'recipients array is required'], 400);
+            }
+
+            $db = \Config\Database::connect();
+            $team = $db->table('sp_team')->where('ids', $access_token)->get()->getRow();
+            if (!$team) {
+                return $this->respond(['status' => 'error', 'message' => 'Invalid access_token'], 401);
+            }
+
+            $session = $db->table('sp_whatsapp_sessions')
+                ->where('instance_id', $instance_id)
+                ->where('team_id', $team->id)
+                ->get()->getRow();
+                
+            if (!$session) {
+                return $this->respond(['status' => 'error', 'message' => 'Invalid instance_id'], 404);
+            }
+
+            // Normalize recipients
+            $normalizedRecipients = [];
+            foreach ($recipients as $idx => $recipient) {
+                    if (is_string($recipient)) { $recipient = ['chat_id' => $recipient, 'number' => $recipient, 'is_group' => true]; }
+                $number = trim((string)($recipient['number'] ?? ''));
+                $chatId = trim((string)($recipient['chat_id'] ?? ''));
+                $isGroup = !empty($recipient['is_group']) || strpos($chatId, 'g.us') !== false || strpos($number, 'g.us') !== false;
+                
+                if ($isGroup) {
+                    $chatId = $chatId ?: $number;
+                    if (empty($chatId)) continue;
+                    if (strpos($chatId, 'g.us') !== false && strpos($chatId, '@') === false) {
+                        $chatId = str_replace('g.us', '@g.us', $chatId);
+                    }
+                    $number = $chatId;
+                } else {
+                    $number = preg_replace('/\D/', '', $number);
+                    if (empty($number)) continue;
+                }
+                
+                $normalizedRecipients[] = [
+                    'index' => (int)($recipient['index'] ?? ($idx + 1)),
+                    'name' => trim((string)($recipient['name'] ?? '')),
+                    'number' => $number,
+                    'chat_id' => $chatId,
+                    'is_group' => $isGroup,
+                    'status' => 'queued',
+                    'error' => ''
+                ];
+            }
+
+            if (empty($normalizedRecipients)) {
+                return $this->respond(['status' => 'error', 'message' => 'No valid recipients'], 400);
+            }
+
+            $hasOnlyGroupRecipients = true;
+            foreach ($normalizedRecipients as $rec) {
+                if (!$rec['is_group']) {
+                    $hasOnlyGroupRecipients = false;
+                    break;
+                }
+            }
+            
+            $finalDelay = $delay_seconds;
+            
+            $uniqueId = uniqid('cmp_');
+            
+            $db->transStart();
+
+            // Insert into Status table
+            $res2 = $res2 = $db->table('sp_android_campaign_status')->insert([
+                'ids' => $uniqueId,
+                'team_id' => $team->id,
+                'instance_id' => $instance_id,
+                'campaign_name' => $campaign_name,
+                'target_count' => count($normalizedRecipients),
+                'target_count' => count($normalizedRecipients),
+                'sent_count' => 0,
+                'failed_count' => 0,
+                    'message_mode' => $message_mode,
+                    'message_label' => $message_label,
+                'delay_seconds' => $finalDelay,
+                    'status' => 'queued',
+                'created' => time(),
+                'changed' => time()
+            ]);
+            
+            // Insert into Queue table
+            $res1 = $res1 = $db->table('sp_android_campaign_queue')->insert([
+                'ids' => $uniqueId,
+                'history_ids' => $uniqueId,
+                'team_id' => $team->id,
+                'instance_id' => $instance_id,
+                'campaign_name' => $campaign_name,
+                'target_count' => count($normalizedRecipients),
+                'payload' => json_encode($payload, JSON_UNESCAPED_UNICODE),
+                'recipients' => json_encode($normalizedRecipients, JSON_UNESCAPED_UNICODE),
+                'current_index' => 0,
+                'sent_count' => 0,
+                'failed_count' => 0,
+                    'message_mode' => $message_mode,
+                    'message_label' => $message_label,
+                'delay_seconds' => $finalDelay,
+                'status' => 'queued',
+                'next_run_at' => time(),
+                'created' => time(),
+                'changed' => time()
+            ]);
+
+            $db->transComplete();
+
+            file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); if ($db->transStatus() === false) { file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); return $this->respond(["status" => "error", "message" => "Database transaction failed"], 500);
+                return $this->respond(['status' => 'error', 'message' => 'Database transaction failed'], 500);
+            }
+
+            return $this->respond([
+                "status" => "success",
+                "message" => "Campaign created",
+                "campaign_id" => $uniqueId
+            ], 200);
+
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function stop_campaign()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = $iData['access_token'] ?? null;
+            $campaign_id = $iData['campaign_id'] ?? '';
+
+            $this->val_par('null', 'access_token', $access_token);
+            $this->val_par('null', 'campaign_id', $campaign_id);
+
+            $db = \Config\Database::connect();
+            $team = $db->table('sp_team')->where('ids', $access_token)->get()->getRow();
+            if (!$team) {
+                return $this->respond(['status' => 'error', 'message' => 'Invalid access_token'], 401);
+            }
+
+            $queueRow = $db->table('sp_android_campaign_queue')
+                ->where('history_ids', $campaign_id)
+                ->where('team_id', $team->id)
+                ->get()->getRow();
+
+            if (!$queueRow) {
+                return $this->respond(['status' => 'error', 'message' => 'Campaign queue not found'], 404);
+            }
+
+            $now = time();
+            $db->transStart();
+
+            $db->table('sp_android_campaign_queue')
+                ->where('id', $queueRow->id)
+                ->update(['status' => 'paused', 'changed' => $now]);
+
+            $db->table('sp_android_campaign_status')
+                ->where('ids', $campaign_id)
+                ->update(['status' => 'paused', 'changed' => $now]);
+
+            $db->transComplete();
+
+            file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); if ($db->transStatus() === false) { file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); return $this->respond(["status" => "error", "message" => "Database transaction failed"], 500);
+                return $this->respond(['status' => 'error', 'message' => 'Database update failed'], 500);
+            }
+
+            return $this->respond([
+                "status" => "success",
+                "message" => "Campaign stopped",
+                "data" => ["campaign_id" => $campaign_id, "queue_status" => "paused"]
+            ], 200);
+
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function start_campaign()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = $iData['access_token'] ?? null;
+            $campaign_id = $iData['campaign_id'] ?? '';
+
+            $this->val_par('null', 'access_token', $access_token);
+            $this->val_par('null', 'campaign_id', $campaign_id);
+
+            $db = \Config\Database::connect();
+            $team = $db->table('sp_team')->where('ids', $access_token)->get()->getRow();
+            if (!$team) {
+                return $this->respond(['status' => 'error', 'message' => 'Invalid access_token'], 401);
+            }
+
+            $queueRow = $db->table('sp_android_campaign_queue')
+                ->where('history_ids', $campaign_id)
+                ->where('team_id', $team->id)
+                ->get()->getRow();
+
+            if (!$queueRow) {
+                return $this->respond(['status' => 'error', 'message' => 'Campaign queue not found'], 404);
+            }
+
+            $now = time();
+            $db->transStart();
+
+            $db->table('sp_android_campaign_queue')
+                ->where('id', $queueRow->id)
+                ->update([
+                    'status' => 'queued',
+                    'next_run_at' => $now,
+                    'last_error' => null,
+                    'changed' => $now
+                ]);
+
+            $db->table('sp_android_campaign_status')
+                ->where('ids', $campaign_id)
+                ->update(['status' => 'queued', 'changed' => $now]);
+
+            $db->transComplete();
+
+            file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); if ($db->transStatus() === false) { file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); return $this->respond(["status" => "error", "message" => "Database transaction failed"], 500);
+                return $this->respond(['status' => 'error', 'message' => 'Database update failed'], 500);
+            }
+
+            return $this->respond([
+                "status" => "success",
+                "message" => "Campaign started",
+                "data" => ["campaign_id" => $campaign_id, "queue_status" => "queued"]
+            ], 200);
+
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function delete_campaign()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = $iData['access_token'] ?? null;
+            $campaign_id = $iData['campaign_id'] ?? '';
+
+            $this->val_par('null', 'access_token', $access_token);
+            $this->val_par('null', 'campaign_id', $campaign_id);
+
+            $db = \Config\Database::connect();
+            $team = $db->table('sp_team')->where('ids', $access_token)->get()->getRow();
+            if (!$team) {
+                return $this->respond(['status' => 'error', 'message' => 'Invalid access_token'], 401);
+            }
+
+            $db->transStart();
+
+            $db->table('sp_android_campaign_queue')
+                ->where('history_ids', $campaign_id)
+                ->where('team_id', $team->id)
+                ->delete();
+
+            $db->table('sp_android_campaign_status')
+                ->where('ids', $campaign_id)
+                ->where('team_id', $team->id)
+                ->delete();
+
+            $db->transComplete();
+
+            file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); if ($db->transStatus() === false) { file_put_contents("/var/www/wappbuzz/writable/logs/sql.txt", "res1: " . (int)($res1 ?? -1) . " res2: " . (int)($res2 ?? -1) . " trans: " . (int)$db->transStatus() . "\n" . (string)$db->getLastQuery() . "\n" . print_r($db->error(), true)); return $this->respond(["status" => "error", "message" => "Database transaction failed"], 500);
+                return $this->respond(['status' => 'error', 'message' => 'Database deletion failed'], 500);
+            }
+
+            return $this->respond([
+                "status" => "success",
+                "message" => "Campaign deleted",
+                "data" => ["campaign_id" => $campaign_id]
+            ], 200);
+
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+    public function save_campaign_status()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = $iData['access_token'] ?? null;
+            $campaign_name = trim((string) ($iData['campaign_name'] ?? ''));
+            $this->val_par('null', 'access_token', $access_token);
+            $this->val_par('null', 'campaign_name', $campaign_name);
+
+            $team = $this->get_team_from_access_token($access_token);
+            $items = $iData['items'] ?? [];
+            $now = time();
+
+            $db = \Config\Database::connect();
+            $res2 = $res2 = $db->table('sp_android_campaign_status')->insert([
+                'ids' => bin2hex(random_bytes(12)),
+                'team_id' => $team->id,
+                'user_email' => trim((string) ($iData['user_email'] ?? '')),
+                'campaign_name' => $campaign_name,
+                'target_count' => count($normalizedRecipients),
+                'target_name' => trim((string) ($iData['target_name'] ?? '')),
+                'target_count' => (int) ($iData['target_count'] ?? 0),
+                'sent_count' => (int) ($iData['sent_count'] ?? 0),
+                'failed_count' => (int) ($iData['failed_count'] ?? 0),
+                'message_mode' => trim((string) ($iData['message_mode'] ?? '')),
+                'message_label' => trim((string) ($iData['message_label'] ?? '')),
+                'delay_seconds' => (int) ($iData['delay_seconds'] ?? 0),
+                'instance_id' => trim((string) ($iData['instance_id'] ?? '')),
+                'status' => 'completed',
+                'meta' => json_encode($iData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+                'items' => json_encode($items, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+                'changed' => $now,
+                'created' => $now,
+            ]);
+
+            return $this->respond([
+                'status' => 'success',
+                'message' => 'Campaign status saved',
+            ], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function list_campaign_status()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = post('access_token') ?? ($iData['access_token'] ?? null);
+            $this->val_par('null', 'access_token', $access_token);
+            $team = $this->get_team_from_access_token($access_token);
+
+            $db = \Config\Database::connect();
+            $rows = $db->table('sp_android_campaign_status')
+                ->where('team_id', $team->id)
+                ->orderBy('created', 'DESC')
+                ->get()
+                ->getResultArray();
+
+            return $this->respond([
+                'status' => 'success',
+                'data' => array_map(function ($row) {
+                    return [
+                        'id' => $row['ids'] ?? '',
+                        'campaign_name' => $row['campaign_name'] ?? '',
+                        'target_name' => $row['target_name'] ?? '',
+                        'target_count' => (int) ($row['target_count'] ?? 0),
+                        'sent_count' => (int) ($row['sent_count'] ?? 0),
+                        'failed_count' => (int) ($row['failed_count'] ?? 0),
+                        'message_mode' => $row['message_mode'] ?? '',
+                        'message_label' => $row['message_label'] ?? '',
+                        'delay_seconds' => (int) ($row['delay_seconds'] ?? 0),
+            'duration_seconds' => max(1, (int)($row['changed'] ?? ($row['created'] ?? time())) - (int)($row['created'] ?? time())),
+                        'instance_id' => $row['instance_id'] ?? '',
+                        'created_at' => date('Y-m-d h:i A', (int) ($row['created'] ?? time())),
+                    ];
+                }, $rows),
+            ], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function get_campaign_status_detail()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = post('access_token') ?? ($iData['access_token'] ?? null);
+            $id = post('id') ?? ($iData['id'] ?? null);
+            $this->val_par('null', 'access_token', $access_token);
+            $this->val_par('null', 'id', $id);
+            $team = $this->get_team_from_access_token($access_token);
+
+            $db = \Config\Database::connect();
+            $row = $db->table('sp_android_campaign_status')
+                ->where('team_id', $team->id)
+                ->where('ids', $id)
+                ->get()
+                ->getRowArray();
+            $this->val_par('empty', 'Campaign history not found', $row, '', 404);
+
+            return $this->respond([
+                'status' => 'success',
+                'data' => [
+                    'summary' => [
+                        'id' => $row['ids'] ?? '',
+                        'campaign_name' => $row['campaign_name'] ?? '',
+                        'target_name' => $row['target_name'] ?? '',
+                        'target_count' => (int) ($row['target_count'] ?? 0),
+                        'sent_count' => (int) ($row['sent_count'] ?? 0),
+                        'failed_count' => (int) ($row['failed_count'] ?? 0),
+                        'message_mode' => $row['message_mode'] ?? '',
+                        'message_label' => $row['message_label'] ?? '',
+                        'delay_seconds' => (int) ($row['delay_seconds'] ?? 0),
+            'duration_seconds' => max(1, (int)($row['changed'] ?? ($row['created'] ?? time())) - (int)($row['created'] ?? time())),
+                        'instance_id' => $row['instance_id'] ?? '',
+                        'created_at' => date('Y-m-d h:i A', (int) ($row['created'] ?? time())),
+                    ],
+                    'items' => $this->decode_json_list($row['items'] ?? '[]'),
+                ],
+            ], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function save_group_sender_status()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = $iData['access_token'] ?? null;
+            $batch_name = trim((string) ($iData['batch_name'] ?? ''));
+            $this->val_par('null', 'access_token', $access_token);
+            $this->val_par('null', 'batch_name', $batch_name);
+
+            $team = $this->get_team_from_access_token($access_token);
+            $items = $iData['items'] ?? [];
+            $now = time();
+
+            $db = \Config\Database::connect();
+            $db->table($db->prefixTable('android_group_sender_status'))->insert([
+                'ids' => bin2hex(random_bytes(12)),
+                'team_id' => $team->id,
+                'user_email' => trim((string) ($iData['user_email'] ?? '')),
+                'batch_name' => $batch_name,
+                'target_count' => (int) ($iData['target_count'] ?? 0),
+                'sent_count' => (int) ($iData['sent_count'] ?? 0),
+                'failed_count' => (int) ($iData['failed_count'] ?? 0),
+                'message_mode' => trim((string) ($iData['message_mode'] ?? '')),
+                'message_label' => trim((string) ($iData['message_label'] ?? '')),
+                'delay_seconds' => (int) ($iData['delay_seconds'] ?? 0),
+                'instance_id' => trim((string) ($iData['instance_id'] ?? '')),
+                'status' => 'completed',
+                'meta' => json_encode($iData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+                'items' => json_encode($items, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+                'changed' => $now,
+                'created' => $now,
+            ]);
+
+            return $this->respond([
+                'status' => 'success',
+                'message' => 'Group sender status saved',
+            ], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function list_group_sender_status()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = post('access_token') ?? ($iData['access_token'] ?? null);
+            $this->val_par('null', 'access_token', $access_token);
+            $team = $this->get_team_from_access_token($access_token);
+
+            $db = \Config\Database::connect();
+            $campaignTable = 'sp_android_campaign_status';
+            $groupTable = $db->prefixTable('android_group_sender_status');
+            $queueTable = 'sp_android_campaign_queue';
+            $groupRows = $db->table($groupTable)
+                ->where('team_id', $team->id)
+                ->orderBy('created', 'DESC')
+                ->get()
+                ->getResultArray();
+            $campaignRows = $db->table($campaignTable)
+                ->where('team_id', $team->id)
+                ->whereIn('message_mode', ['group_text', 'group_media', 'group_forward'])
+                ->orderBy('created', 'DESC')
+                ->get()
+                ->getResultArray();
+            $rows = array_merge($groupRows, $campaignRows);
+            usort($rows, function ($left, $right) {
+                return ((int) ($right['created'] ?? 0)) <=> ((int) ($left['created'] ?? 0));
+            });
+
+            return $this->respond([
+                'status' => 'success',
+                'data' => array_map(function ($row) use ($db, $queueTable) {
+                    $queue = $this->get_group_sender_queue_row(
+                        $db,
+                        $queueTable,
+                        $row['team_id'] ?? 0,
+                        $row['ids'] ?? ''
+                    );
+                    return $this->make_group_sender_summary($row, $queue, time());
+                }, $rows),
+            ], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function get_group_sender_status_detail()
+    {
+        try {
+            $this->check_api_key();
+            $this->ensure_history_tables();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $access_token = post('access_token') ?? ($iData['access_token'] ?? null);
+            $id = post('id') ?? ($iData['id'] ?? null);
+            $this->val_par('null', 'access_token', $access_token);
+            $this->val_par('null', 'id', $id);
+            $team = $this->get_team_from_access_token($access_token);
+
+            $db = \Config\Database::connect();
+            $campaignTable = 'sp_android_campaign_status';
+            $groupTable = $db->prefixTable('android_group_sender_status');
+            $queueTable = 'sp_android_campaign_queue';
+            $row = $db->table($groupTable)
+                ->where('team_id', $team->id)
+                ->where('ids', $id)
+                ->get()
+                ->getRowArray();
+            if (!$row) {
+                $row = $db->table($campaignTable)
+                    ->where('team_id', $team->id)
+                    ->where('ids', $id)
+                    ->get()
+                    ->getRowArray();
+            }
+            $this->val_par('empty', 'Group sender history not found', $row, '', 404);
+            $items = $this->normalize_group_sender_items($this->decode_json_list($row['items'] ?? '[]'));
+            $queue = $this->get_group_sender_queue_row($db, $queueTable, $team->id, $row['ids'] ?? '');
+
+            return $this->respond([
+                'status' => 'success',
+                'data' => [
+                    'summary' => $this->make_group_sender_summary($row, $queue, time()),
+                    'items' => $items,
+                ],
+            ], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function get_autologin()
+    {
+        try {
+            $this->check_api_key();
+
+            $user_search = post("user") ?? null;
+            $this->val_par('null', 'user', $user_search);
+
+            $user = db_get('*', TB_USERS, ["email" => $user_search]);
+            $this->val_par('empty', __('User not found'), $user, '', 404);
+
+            if ($user->status == 1 || $user->status == 0) {
+                throw new Error("user account in not available");
+            }
+
+            $privateKey = $this->api_key;
+            $objDateTime = date_create('+1day');
+            $domain = base_url();
+            $url = $domain . '/admin_api/check_token';
+
+            $hash = hash('sha256', $privateKey . $url . $user_search . $objDateTime->getTimestamp());
+
+            $autoLoginUrl = http_build_query(array(
+                'user' => $user_search,
+                'time_limit' => $objDateTime->getTimestamp(),
+                'token' => $hash
+            ));
+
+            $data = [
+                "url" => $url . '?' . $autoLoginUrl,
+                'user' => $user_search,
+                'time_limit' => $objDateTime->getTimestamp(),
+                'token' => $hash
+            ];
+
+
+            return $this->respond(["status" => "success", "message" => "success", "data" => $data], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    public function migrate_users()
+    {
+        try {
+
+            $this->check_api_key();
+
+            $current_page = (int) ((post("page") ?? 1) - 1);
+            $per_page = post("size") ?? 30;
+
+            $url = post("url");
+            //$this->val_par('null', '66param url', $url);
+
+            $key_src = post("key");
+            //$this->val_par('null', '66param key', $key);
+
+
+
+            $db = \Config\Database::connect();
+            $builder = $db->table(TB_USERS . " as a");
+            $builder->select('a.*');
+
+            $builder->limit($per_page, $per_page * $current_page);
+            $query = $builder->get();
+            $result = $query->getResult();
+            $query->freeResult();
+
+            $ret = array();
+            foreach ($result as $key => $user) {
+                $res = $this->create_66_user($user, $url, $key_src);
+                $ret[] = [
+                    'id' => $user->id,
+                    'email' => $user->email,
+                    'result' => $res
+                ];
+            }
+
+
+
+            return $this->respond(["status" => "success", "message" => "success", "data" => $ret], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    private function create_66_user($user, $base_url, $api_key)
+    {
+
+        try {
+
+            if (!$base_url || $base_url == '') {
+                throw new Error('url not configured');
+            }
+
+            if (!$api_key || $api_key == '') {
+                throw new Error('api_key not configured');
+            }
+
+            $curl = curl_init($base_url . '/users');
+            $data = array();
+            $data['email'] = $user->email;
+            $data['name'] = $user->fullname;
+            $data['password'] = explode("@", $user->email)[0] . '_' . date("Ym");
+
+
+            curl_setopt($curl, CURLOPT_POST, true);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+            $headers = array(
+                "'Content-Type: multipart/form-data",
+                "Authorization: Bearer " . $api_key,
+            );
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+            $response = curl_exec($curl);
+            curl_close($curl);
+
+            $expired_date = date('Y-m-d', strtotime($user->expiration_date));
+
+            $nw_usr = json_decode($response); // creo el objeto del nuevo usuario
+
+            if (isset($nw_usr->data->id)) {
+                $curl = curl_init($base_url . '/users/' . $nw_usr->data->id); // asigno la url al curl con el id del nuevo usuario
+                $dataUpdate = array();
+                $dataUpdate['plan_id'] = $user->plan; // asigno el plan a la data que se enviar?
+                $dataUpdate['tz'] = $user->timezone;
+
+                if (isset($expired_date))
+                    $dataUpdate["plan_expiration_date"] = $expired_date;
+
+                curl_setopt($curl, CURLOPT_POST, true);
+                curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($dataUpdate));
+                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+                curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+                curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+                $responseUpdate = curl_exec($curl);
+                curl_close($curl);
+
+                return $nw_usr;
+            } else {
+                return $nw_usr;
+            }
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function check_token()
+    {
+        try {
+
+            remove_session(["uid"]);
+            remove_session(["team_id"]);
+            delete_cookies("uid");
+            delete_cookies("team_id");
+
+            $timeLimit = post('time_limit');
+            $this->val_par('null', 'time_limit', $timeLimit);
+
+            if ((int) $timeLimit < time()) {
+                throw new Error('expired token');
+            }
+
+            $privateKey = $this->api_key;
+            $domain = base_url();
+            $url = $domain . '/admin_api/check_token';
+
+            $user_email = post('user');
+
+            $hash = hash('sha256', $privateKey . $url . $user_email . $timeLimit);
+
+            if ($hash != post('token')) {
+                throw new Error('invalid token');
+            }
+
+            $user = db_get('*', TB_USERS, ["email" => addslashes($user_email)]);
+            $this->val_par('empty', __('User not found'), $user, '', 404);
+
+            $team = db_get("id,ids", TB_TEAM, "owner = '{$user->id}'");
+            $this->val_par('empty', __('There is a problem on your account. Please try again later'), $team, '', 500);
+
+            if ($user->status == 1) {
+                throw new Error(__('Your account is not activated'));
+            }
+
+            if ($user->status == 0) {
+                throw new Error(__('Your account is banned'));
+            }
+
+            $u = db_update(TB_USERS, ["last_login" => time()], ["id" => $user->id]);
+
+            set_session(["uid" => $user->ids]);
+            set_session(["team_id" => $team->ids]);
+
+            return redirect()->to(base_url() . '/dashboard');
+      } catch (\Throwable $th) {
+          return $this->manage_exception($th);
+      }
+  }
+
+  public function storage_status()
+  {
+      try {
+          $this->check_api_key();
+
+          $iData = (array) json_decode(file_get_contents("php://input"), true);
+          $access_token = post('access_token') ?? ($iData['access_token'] ?? null);
+          $this->val_par('null', 'access_token', $access_token);
+          // AuthZ boundary: ensure token belongs to a valid team.
+          $this->get_team_from_access_token($access_token);
+
+          $disk = $this->read_root_disk_status();
+          $media = $this->read_media_cache_status('/opt/waziper-engine/files');
+
+          $log_file = '/var/log/wappbuzz-retention-cleanup.log';
+          $tail = $this->safe_exec('tail -n 40 ' . escapeshellarg($log_file) . ' 2>/dev/null');
+
+          return $this->respond([
+              'status' => 'success',
+              'data' => [
+                  'server_time_utc' => gmdate('c'),
+                  'disk' => $disk,
+                  'media_cache' => $media,
+                  'cleanup_log_tail' => $tail,
+                  'force_flag_path' => '/tmp/wappbuzz_force_cleanup.flag',
+              ],
+          ], 200);
+      } catch (\Throwable $th) {
+          return $this->manage_exception($th);
+      }
+  }
+
+  public function request_storage_cleanup()
+  {
+      try {
+          $this->check_api_key();
+
+          $iData = (array) json_decode(file_get_contents("php://input"), true);
+          $access_token = post('access_token') ?? ($iData['access_token'] ?? null);
+          $this->val_par('null', 'access_token', $access_token);
+          $this->get_team_from_access_token($access_token);
+
+          // PHP-FPM is not root. We drop a flag file in /tmp and the root cron cleanup script will pick it up.
+          $flag = '/tmp/wappbuzz_force_cleanup.flag';
+          @file_put_contents($flag, (string) time());
+
+          return $this->respond([
+              'status' => 'success',
+              'message' => 'Cleanup requested. Server will cleanup on next cron tick.',
+              'data' => [
+                  'flag_path' => $flag,
+                  'requested_at_utc' => gmdate('c'),
+              ],
+          ], 200);
+      } catch (\Throwable $th) {
+          return $this->manage_exception($th);
+      }
+  }
+
+  private function check_api_key()
+  {
+      $api_key = post("api_key");
+      // Android JSON body fallback
+      if (!isset($api_key)) {
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $api_key = $iData['api_key'] ?? null;
+        }
+        if (!isset($api_key)) {
+            throw new Error("api-key is required", 403);
+        } elseif ($api_key != $this->api_key) {
+            throw new Error("Not Allowed", 401);
+        }
+    }
+
+    public function provision_waziper_user()
+    {
+        try {
+            $this->check_api_key();
+
+            $iData = (array) json_decode(file_get_contents("php://input"), true);
+            $email = trim(strtolower((string) ($iData['email'] ?? post('email') ?? '')));
+            $name = trim((string) ($iData['name'] ?? post('name') ?? ''));
+            $uid = trim((string) ($iData['uid'] ?? post('uid') ?? ''));
+
+            $this->val_par('null', 'email', $email);
+            $this->val_par('email', 'email', $email);
+
+            $existingUser = db_get('*', TB_USERS, ['email' => $email]);
+            if ($existingUser) {
+                $existingTeam = db_get('*', TB_TEAM, ['owner' => $existingUser->id]);
+                if ($existingTeam) {
+                    return $this->respond([
+                        'status' => 'success',
+                        'message' => 'Workspace already exists',
+                        'data' => [
+                            'access_token' => $existingTeam->ids,
+                            'team_id' => $existingTeam->id,
+                            'waziper_user_id' => $existingUser->id,
+                            'username' => $existingUser->username,
+                            'uid' => $uid,
+                            'provisioned' => false,
+                        ],
+                    ], 200);
+                }
+            }
+
+            $templateTeam = db_get('*', TB_TEAM, ['ids' => $this->default_mobile_template_access_token]);
+            $this->val_par('empty', 'Template team not found', $templateTeam, '', 500);
+
+            $plan = db_get('*', TB_PLANS, ['id' => $templateTeam->pid]);
+            $this->val_par('empty', 'Template plan not found', $plan, '', 500);
+
+            $displayName = $name !== '' ? $name : $this->email_name($email);
+            $username = $this->generate_unique_username($email);
+            $password = md5(bin2hex(random_bytes(8)));
+            $avatar = save_img(get_avatar($displayName), WRITEPATH . 'avatar/');
+            $now = time();
+
+            $userId = db_insert(TB_USERS, [
+                'ids' => ids(),
+                'is_admin' => 0,
+                'role' => 0,
+                'fullname' => $displayName,
+                'username' => $username,
+                'email' => $email,
+                'password' => $password,
+                'plan' => $plan->id,
+                'expiration_date' => 0,
+                'timezone' => 'Asia/Kolkata',
+                'login_type' => 'direct',
+                'avatar' => $avatar,
+                'status' => 2,
+                'changed' => $now,
+                'created' => $now,
+            ]);
+
+            $teamAccessToken = ids();
+            $teamId = db_insert(TB_TEAM, [
+                'ids' => $teamAccessToken,
+                'owner' => $userId,
+                'pid' => $plan->id,
+                'permissions' => $templateTeam->permissions,
+            ]);
+
+            return $this->respond([
+                'status' => 'success',
+                'message' => 'Workspace created',
+                'data' => [
+                    'access_token' => $teamAccessToken,
+                    'team_id' => $teamId,
+                    'waziper_user_id' => $userId,
+                    'username' => $username,
+                    'uid' => $uid,
+                    'provisioned' => true,
+                ],
+            ], 200);
+        } catch (\Throwable $th) {
+            return $this->manage_exception($th);
+        }
+    }
+
+    private function get_team_from_access_token($access_token)
+    {
+        $db = \Config\Database::connect();
+        $team = $db->table('sp_team')->where('ids', $access_token)->get()->getRow();
+        if (!$team) {
+            throw new Error('Invalid access_token', 401);
+        }
+        return $team;
+    }
+
+    private function email_name($email)
+    {
+        $base = explode('@', (string) $email)[0] ?? 'user';
+        $base = preg_replace('/[^a-z0-9]+/i', ' ', $base);
+        $base = trim((string) $base);
+        return $base !== '' ? ucwords($base) : 'User';
+    }
+
+    private function generate_unique_username($email)
+    {
+        $base = strtolower((string) (explode('@', $email)[0] ?? 'senderuser'));
+        $base = preg_replace('/[^a-z0-9_]/', '', $base);
+        $base = trim((string) $base, '_');
+        if ($base === '') {
+            $base = 'senderuser';
+        }
+
+        $candidate = substr($base, 0, 20);
+        $suffix = 0;
+        while (db_get('id', TB_USERS, ['username' => $candidate])) {
+            $suffix++;
+            $candidate = substr($base, 0, max(6, 20 - strlen((string) $suffix) - 1)) . '_' . $suffix;
+        }
+
+        return $candidate;
+    }
+
+    private function decode_json_list($json)
+    {
+        $decoded = json_decode((string) $json, true);
+        return is_array($decoded) ? $decoded : [];
+    }
+
+    private function normalize_group_sender_items($items)
+    {
+        return array_values(array_map(function ($item) {
+            $row = is_array($item) ? $item : [];
+            return [
+                'index' => (int) ($row['index'] ?? 0),
+                'group_id' => (string) ($row['group_id'] ?? $row['chat_id'] ?? $row['number'] ?? ''),
+                'group_name' => (string) ($row['group_name'] ?? $row['name'] ?? ''),
+                'status' => (string) ($row['status'] ?? 'queued'),
+                'error' => (string) ($row['error'] ?? ''),
+            ];
+        }, is_array($items) ? $items : []));
+    }
+
+    private function make_group_sender_summary($row, $queue, $now)
+    {
+        $items = $this->normalize_group_sender_items($this->decode_json_list($row['items'] ?? '[]'));
+        $sentCount = count(array_filter($items, function ($item) {
+            return strtolower((string) ($item['status'] ?? '')) === 'sent';
+        }));
+        $failedCount = count(array_filter($items, function ($item) {
+            return strtolower((string) ($item['status'] ?? '')) === 'failed';
+        }));
+        $pendingCount = count(array_filter($items, function ($item) {
+            return strtolower((string) ($item['status'] ?? '')) === 'queued';
+        }));
+        if (empty($items)) {
+            $sentCount = (int) ($row['sent_count'] ?? 0);
+            $failedCount = (int) ($row['failed_count'] ?? 0);
+        }
+        $nextRunAt = (int) ($queue['next_run_at'] ?? 0);
+        $lastError = (string) ($queue['last_error'] ?? '');
+        $queueStatus = (string) ($queue['status'] ?? '');
+
+        return [
+            'id' => $row['ids'] ?? '',
+            'batch_name' => $row['batch_name'] ?? $row['campaign_name'] ?? '',
+            'target_count' => (int) ($row['target_count'] ?? 0),
+            'sent_count' => $sentCount,
+            'failed_count' => $failedCount,
+            'pending_count' => $pendingCount,
+            'message_mode' => $row['message_mode'] ?? '',
+            'message_label' => $row['message_label'] ?? '',
+            'delay_seconds' => (int) ($row['delay_seconds'] ?? 0),
+            'duration_seconds' => max(1, (int)($row['changed'] ?? ($row['created'] ?? time())) - (int)($row['created'] ?? time())),
+            'instance_id' => $row['instance_id'] ?? '',
+            'queue_status' => $queueStatus,
+            'next_run_in_sec' => $nextRunAt > $now ? ($nextRunAt - $now) : 0,
+            'cooldown_active' => stripos($lastError, 'cooldown') !== false,
+            'last_error' => $lastError,
+            'created_at' => date('Y-m-d h:i A', (int) ($row['created'] ?? time())),
+        ];
+    }
+
+    private function get_group_sender_queue_row($db, $queueTable, $teamId, $historyId)
+    {
+        $query = $db->table($queueTable)
+            ->where('team_id', (int) $teamId)
+            ->where('history_ids', (string) $historyId)
+            ->orderBy('id', 'DESC')
+            ->get();
+
+        return $query ? ($query->getRowArray() ?? []) : [];
+    }
+
+    private function ensure_history_tables()
+    {
+        $db = \Config\Database::connect();
+        $campaign_table = 'sp_android_campaign_status';
+        $group_table = $db->prefixTable('android_group_sender_status');
+
+        $db->query("
+            CREATE TABLE IF NOT EXISTS `{$campaign_table}` (
+                `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+                `ids` VARCHAR(64) NOT NULL,
+                `team_id` INT NOT NULL DEFAULT 0,
+                `user_email` VARCHAR(190) DEFAULT '',
+                `campaign_name` VARCHAR(255) DEFAULT '',
+                `target_name` VARCHAR(255) DEFAULT '',
+                `target_count` INT NOT NULL DEFAULT 0,
+                `sent_count` INT NOT NULL DEFAULT 0,
+                `failed_count` INT NOT NULL DEFAULT 0,
+                `message_mode` VARCHAR(50) DEFAULT '',
+                `message_label` VARCHAR(255) DEFAULT '',
+                `delay_seconds` INT NOT NULL DEFAULT 0,
+                `instance_id` VARCHAR(190) DEFAULT '',
+                `status` VARCHAR(50) DEFAULT 'completed',
+                `meta` LONGTEXT NULL,
+                `items` LONGTEXT NULL,
+                `changed` INT NOT NULL DEFAULT 0,
+                `created` INT NOT NULL DEFAULT 0,
+                PRIMARY KEY (`id`),
+                UNIQUE KEY `uniq_ids` (`ids`),
+                KEY `idx_team_created` (`team_id`, `created`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+        ");
+
+        $db->query("
+            CREATE TABLE IF NOT EXISTS `{$group_table}` (
+                `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+                `ids` VARCHAR(64) NOT NULL,
+                `team_id` INT NOT NULL DEFAULT 0,
+                `user_email` VARCHAR(190) DEFAULT '',
+                `batch_name` VARCHAR(255) DEFAULT '',
+                `target_count` INT NOT NULL DEFAULT 0,
+                `sent_count` INT NOT NULL DEFAULT 0,
+                `failed_count` INT NOT NULL DEFAULT 0,
+                `message_mode` VARCHAR(50) DEFAULT '',
+                `message_label` VARCHAR(255) DEFAULT '',
+                `delay_seconds` INT NOT NULL DEFAULT 0,
+                `instance_id` VARCHAR(190) DEFAULT '',
+                `status` VARCHAR(50) DEFAULT 'completed',
+                `meta` LONGTEXT NULL,
+                `items` LONGTEXT NULL,
+                `changed` INT NOT NULL DEFAULT 0,
+                `created` INT NOT NULL DEFAULT 0,
+                PRIMARY KEY (`id`),
+                UNIQUE KEY `uniq_ids` (`ids`),
+                KEY `idx_team_created` (`team_id`, `created`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+        ");
+    }
+
+
+
+    private function manage_exception(\Throwable $th)
+    {
+        if ($th->getCode() >= 200 && $th->getCode() <= 499) {
+            return $this->respond(["status" => "error", "message" => $th->getMessage()], $th->getCode());
+        } else {
+            return $this->respond(["status" => "error", "message" => $th->getMessage()], 500);
+        }
+    }
+
+    private function safe_exec(string $cmd): string
+    {
+        if (!function_exists('shell_exec')) {
+            return '';
+        }
+        $out = shell_exec($cmd);
+        if (!is_string($out)) {
+            return '';
+        }
+        return trim($out);
+    }
+
+    private function read_root_disk_status(): array
+    {
+        $line = $this->safe_exec("df -P / 2>/dev/null | tail -n 1");
+        if ($line === '') {
+            return [
+                'raw' => '',
+                'total_kb' => 0,
+                'used_kb' => 0,
+                'avail_kb' => 0,
+                'used_percent' => 0,
+            ];
+        }
+        $parts = preg_split('/\\s+/', trim($line));
+        // filesystem blocks used available use% mountpoint
+        $total_kb = isset($parts[1]) ? (int) $parts[1] : 0;
+        $used_kb = isset($parts[2]) ? (int) $parts[2] : 0;
+        $avail_kb = isset($parts[3]) ? (int) $parts[3] : 0;
+        $used_percent = 0;
+        if (isset($parts[4])) {
+            $used_percent = (int) str_replace('%', '', (string) $parts[4]);
+        }
+        return [
+            'raw' => $line,
+            'total_kb' => $total_kb,
+            'used_kb' => $used_kb,
+            'avail_kb' => $avail_kb,
+            'used_percent' => $used_percent,
+        ];
+    }
+
+    private function read_media_cache_status(string $dir): array
+    {
+        $exists = is_dir($dir);
+        if (!$exists) {
+            return [
+                'path' => $dir,
+                'exists' => false,
+                'bytes' => 0,
+                'human' => '0B',
+                'file_count' => 0,
+            ];
+        }
+
+        $bytes = 0;
+        $line = $this->safe_exec('du -sb ' . escapeshellarg($dir) . ' 2>/dev/null | head -n 1');
+        if ($line !== '') {
+            $p = preg_split('/\\s+/', $line);
+            $bytes = isset($p[0]) ? (int) $p[0] : 0;
+        }
+        $humanLine = $this->safe_exec('du -sh ' . escapeshellarg($dir) . ' 2>/dev/null | head -n 1');
+        $human = $humanLine !== '' ? (preg_split('/\\s+/', $humanLine)[0] ?? '') : '';
+        if ($human === '') {
+            $human = $this->format_bytes($bytes);
+        }
+
+        $countLine = $this->safe_exec('find ' . escapeshellarg($dir) . ' -maxdepth 1 -type f 2>/dev/null | wc -l');
+        $fileCount = $countLine !== '' ? (int) trim($countLine) : 0;
+
+        return [
+            'path' => $dir,
+            'exists' => true,
+            'bytes' => $bytes,
+            'human' => $human,
+            'file_count' => $fileCount,
+        ];
+    }
+
+    private function format_bytes(int $bytes): string
+    {
+        if ($bytes <= 0) {
+            return '0B';
+        }
+        $units = ['B', 'KB', 'MB', 'GB', 'TB'];
+        $i = 0;
+        $b = (float) $bytes;
+        while ($b >= 1024 && $i < count($units) - 1) {
+            $b /= 1024;
+            $i++;
+        }
+        return round($b, 1) . $units[$i];
+    }
+
+    private function val_par(string $type, string $message, $data, $value = '', $code = 400)
+    {
+        switch ($type) {
+            case 'email':
+                if (!filter_var($data, FILTER_VALIDATE_EMAIL)) {
+                    throw new Error(sprintf(__('%s is not a valid email address'), $message), $code);
+                }
+                break;
+            case 'empty':
+                if (empty($data)) {
+                    throw new Error($message, $code);
+                }
+                break;
+            case 'min_length':
+                if (strlen($data) < $value) {
+                    throw new Error(sprintf(__('%s must be greater than or equal to %d characters'), $message, $value), $code);
+                }
+                break;
+            case 'not_empty':
+                if (!empty($data)) {
+                    throw new Error($message, $code);
+                }
+                break;
+            default:
+                if ($data != null || is_numeric($data)) {
+                } else {
+                    throw new Error(sprintf(__('%s is required'), $message), $code);
+                }
+        }
+    }
+}
+

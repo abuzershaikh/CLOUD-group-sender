@@ -1,0 +1,227 @@
+ERROR - 2026-04-27 02:49:37 --> Error connecting to the database: mysqli_sql_exception: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-04-27 02:49:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Permission denied
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Filters/MainFilter.php(57): db_get()
+ 5 SYSTEMPATH/Filters/Filters.php(182): App\Filters\MainFilter->before()
+ 6 SYSTEMPATH/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-04-27 02:49:37 --> Error connecting to the database: mysqli_sql_exception: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-04-27 02:49:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Permission denied
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Filters/MainFilter.php(57): db_get()
+ 5 SYSTEMPATH/Filters/Filters.php(182): App\Filters\MainFilter->before()
+ 6 SYSTEMPATH/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-04-27 02:49:46 --> Error connecting to the database: mysqli_sql_exception: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-04-27 02:49:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Permission denied
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Filters/MainFilter.php(57): db_get()
+ 5 SYSTEMPATH/Filters/Filters.php(182): App\Filters\MainFilter->before()
+ 6 SYSTEMPATH/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-04-27 02:50:20 --> Error connecting to the database: mysqli_sql_exception: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-04-27 02:50:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Permission denied
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Filters/MainFilter.php(57): db_get()
+ 5 SYSTEMPATH/Filters/Filters.php(182): App\Filters\MainFilter->before()
+ 6 SYSTEMPATH/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-04-27 02:50:20 --> Error connecting to the database: mysqli_sql_exception: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/index.php(34): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-04-27 02:50:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Permission denied
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Filters/MainFilter.php(57): db_get()
+ 5 SYSTEMPATH/Filters/Filters.php(182): App\Filters\MainFilter->before()
+ 6 SYSTEMPATH/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-04-27 02:51:45 --> Error connecting to the database: mysqli_sql_exception: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#8 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/wappbuzz/diag_boot.php(22): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Permission denied in /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/wappbuzz/app/Helpers/Common_helper.php(1444): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/wappbuzz/app/Filters/MainFilter.php(57): db_get()
+#5 /var/www/wappbuzz/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\MainFilter->before()
+#6 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+#7 /var/www/wappbuzz/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/wappbuzz/diag_boot.php(22): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-04-27 02:52:22 --> ErrorException: Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$top_sidebar is deprecated
+in FCPATH/inc/core/Appearance/Filters/beforeFilter.php on line 245.
+ 1 FCPATH/inc/core/Appearance/Filters/beforeFilter.php(245): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Filters/MainFilter.php(135): include_once('/var/www/wappbuzz/inc/core/Appearance/Filters/beforeFilter.php')
+ 3 SYSTEMPATH/Filters/Filters.php(182): App\Filters\MainFilter->before()
+ 4 SYSTEMPATH/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-04-27 02:52:22 --> ErrorException: Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$top_sidebar is deprecated
+in FCPATH/inc/core/Appearance/Filters/beforeFilter.php on line 245.
+ 1 FCPATH/inc/core/Appearance/Filters/beforeFilter.php(245): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Filters/MainFilter.php(135): include_once('/var/www/wappbuzz/inc/core/Appearance/Filters/beforeFilter.php')
+ 3 SYSTEMPATH/Filters/Filters.php(182): App\Filters\MainFilter->before()
+ 4 SYSTEMPATH/CodeIgniter.php(475): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(34): CodeIgniter\CodeIgniter->run()

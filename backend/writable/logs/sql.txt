@@ -1,0 +1,8 @@
+res1: -1 res2: -1 trans: 1
+UPDATE `sp_android_campaign_status` SET `status` = 'queued', `changed` = 1785490775
+WHERE `ids` = 'cmp_6a6c63af75460'
+Array
+(
+    [code] => 0
+    [message] => 
+)

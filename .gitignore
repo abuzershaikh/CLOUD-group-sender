@@ -1,0 +1,10 @@
+.env
+node_modules/
+backend/assets/uploads/
+engine/files/
+engine/sessions/
+engine/cache/
+*.zip
+*.tar.gz
+*.bak
+*.bak_*
