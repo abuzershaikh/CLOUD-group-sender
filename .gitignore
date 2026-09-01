@@ -22,3 +22,4 @@ backend/writable/debugbar/
 # Misc
 .DS_Store
 Thumbs.db
+engine/cache/
