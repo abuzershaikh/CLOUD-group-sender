@@ -3943,7 +3943,7 @@ const WAZIPER = {
           if (chat_id.includes("g.us") || chat_id.includes("@g.us")) {
             try {
               console.log('📋 Fetching group metadata for:', chat_id);
-              await sessions[instance_id].groupMetadata(chat_id);
+              await WAZIPER.getCachedGroupMetadata(sessions[instance_id], chat_id);
             } catch (metadataError) {
               console.warn('⚠️ Could not fetch group metadata (non-fatal):', metadataError.message);
             }
