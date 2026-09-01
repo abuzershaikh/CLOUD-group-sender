@@ -1296,35 +1296,46 @@ const WAZIPER = {
 	get_pairing: async function (instance_id, req, res) {
 	    var client = sessions[instance_id];
 		if (client == undefined) {
-			return res.json({ status: 'error', message: "The WhatsApp session could not be found in the system" });
+			return res.json({ status: "error", message: "The WhatsApp session could not be found in the system" });
 		}
 
-		// Check if already logged in
 		const alreadyAuthenticated = !!client?.authState?.creds?.me?.id || !!client?.user?.id;
 		if (alreadyAuthenticated) {
-			return res.json({ status: 'error', message: "It seems that you have logged in successfully" });
+			return res.json({ status: "error", message: "It seems that you have logged in successfully" });
 		}
 
-		/**
-		 * FIX: Pairing code should work independently of QR code
-		 * Original condition required client.qrcode != undefined, which prevented pairing code from working
-		 * New condition: Only check if NOT already registered
-		 */
 		if (!alreadyAuthenticated) {
 		    let phoneNumber = req.query.phone;
+		    const forceNew = req.query.force === "true" || req.query.force === "1";
 
 		    if (!phoneNumber) {
-		        return res.json({ status: 'error', message: "Phone number is required for pairing code authentication" });
+		        return res.json({ status: "error", message: "Phone number is required for pairing code authentication" });
 		    }
 
-		    phoneNumber = phoneNumber.replace(/\D/g, '');
+		    phoneNumber = phoneNumber.replace(/\D/g, "");
 
-		    if (phoneNumber.length < 10) {
-		        return res.json({ status: 'error', message: "Invalid phone number format. Please provide a valid phone number without + or special characters" });
+		    if (phoneNumber.length === 10) {
+		        phoneNumber = "91" + phoneNumber;
+		    }
+
+		    if (phoneNumber.length < 10 || phoneNumber.length > 15) {
+		        return res.json({ status: "error", message: "Invalid phone number format. Please provide a valid phone number with country code" });
+		    }
+
+		    const nowMs = Date.now();
+		    if (!forceNew && client.paircode && client.paircode_phone === phoneNumber && (nowMs - (client.paircode_time || 0) < 120000)) {
+		        console.log("[Pairing] Returning active cached pairing code for", phoneNumber + ":", client.paircode);
+		        return res.json({
+		            status: "success",
+		            message: "Success",
+		            code: client.paircode,
+		            pair_code: (client.paircode.match(/.{1,4}/g) || [client.paircode]).join("-"),
+		            expires_in_sec: Math.max(0, Math.round((120000 - (nowMs - client.paircode_time)) / 1000))
+		        });
 		    }
 
 		    const waitForSocketReady = async (socket) => {
-		        for (let i = 0; i < 20; i++) {
+		        for (let i = 0; i < 25; i++) {
 		            const wsState = socket?.ws?.readyState ?? socket?.ws?.socket?._readyState;
 		            if (wsState === 1 || socket?.qrcode !== undefined) {
 		                return true;
@@ -1342,25 +1353,30 @@ const WAZIPER = {
 
 		            const ready = await waitForSocketReady(client);
 		            if (!ready) {
-		                throw new Error("WhatsApp socket is not ready yet");
+		                throw new Error("WhatsApp socket is connecting, please wait 3 seconds and retry");
 		            }
 
 		            client.paircode = undefined;
-		            client.paircode = await client.requestPairingCode(phoneNumber);
-		            console.log('Pairing code generated for', phoneNumber + ':', (client.paircode.match(/.{1,4}/g)).join('-'));
+		            const rawCode = await client.requestPairingCode(phoneNumber);
+		            client.paircode = rawCode;
+		            client.paircode_phone = phoneNumber;
+		            client.paircode_time = Date.now();
+
+		            const formattedCode = (client.paircode.match(/.{1,4}/g) || [client.paircode]).join("-");
+		            console.log("✅ Pairing code successfully generated for", phoneNumber + ":", formattedCode);
 		            pairingError = null;
 		            break;
 		        } catch (error) {
 		            pairingError = error;
-		            console.error(`Error generating pairing code (attempt ${attempt}/3):`, error);
+		            console.error("Error generating pairing code (attempt " + attempt + "/3):", error.message);
 
-		            const isConnectionClosed = `${error?.message || ''}`.includes('Connection Closed');
+		            const isConnectionClosed = String(error?.message || "").includes("Connection Closed");
 		            if (attempt < 3 && isConnectionClosed) {
 		                try {
 		                    delete sessions[instance_id];
 		                    client = await WAZIPER.session(instance_id, true);
 		                } catch (refreshError) {
-		                    console.error(`Failed to refresh session for pairing retry ${attempt}:`, refreshError.message);
+		                    console.error("Failed to refresh session for pairing retry " + attempt + ":", refreshError.message);
 		                }
 		                await Common.sleep(2000);
 		                continue;
@@ -1369,7 +1385,7 @@ const WAZIPER = {
 		    }
 
 		    if (pairingError) {
-		        for (let i = 0; i < 15; i++) {
+		        for (let i = 0; i < 10; i++) {
 		            if (client?.qrcode !== undefined) {
 		                break;
 		            }
@@ -1377,19 +1393,19 @@ const WAZIPER = {
 		        }
 
 		        if (client?.qrcode) {
-		            const qrCodeImage = qrimg.imageSync(client.qrcode, { type: 'png' });
+		            const qrCodeImage = qrimg.imageSync(client.qrcode, { type: "png" });
 		            return res.json({
-		                status: 'success',
+		                status: "success",
 		                message: "Pairing code unavailable. Use QR code authentication.",
 		                code: null,
-		                fallback: 'qrcode',
-		                base64: 'data:image/png;base64,' + qrCodeImage.toString('base64')
+		                fallback: "qrcode",
+		                base64: "data:image/png;base64," + qrCodeImage.toString("base64")
 		            });
 		        }
 
 		        return res.json({
-		            status: 'error',
-		            message: "Failed to generate pairing code. Please try again or use QR code authentication."
+		            status: "error",
+		            message: "Failed to generate pairing code (" + (pairingError.message || "Unknown error") + "). Please try again or use QR code."
 		        });
 		    }
 		}
