@@ -717,7 +717,7 @@ function markAdaptiveFailure(instanceId, error) {
     const state = getCampaignAdaptiveState(instanceId);
     compactAdaptiveState(state, now);
 
-    const text = `${error?.message || error || ''}`.toLowerCase();
+    const text = String(error && error.message ? error.message : (error || '')).toLowerCase();
     const timeoutLike =
         text.includes('timed out') ||
         text.includes('request time-out') ||
@@ -730,17 +730,13 @@ function markAdaptiveFailure(instanceId, error) {
         state.recentTimeouts.push(now);
     }
 
-    // Step-up adaptive delay on transient failures, capped at 45s extra.
-    state.extraDelaySec = Math.min(45, Number(state.extraDelaySec || 0) + (timeoutLike ? 5 : 2));
+    // ULTRA-FAST: Max extra delay capped at only 1s (instead of 45s)
+    state.extraDelaySec = Math.min(1, Number(state.extraDelaySec || 0) + (timeoutLike ? 1 : 0));
     state.recentSuccesses = 0;
     state.lastUpdatedAt = now;
 
-    // If timeout spikes, enter cooldown to avoid hammering WhatsApp.
-    if (state.recentTimeouts.length >= 4) {
-        state.cooldownUntil = now + 90;
-    } else if (state.recentTimeouts.length >= 2) {
-        state.cooldownUntil = Math.max(Number(state.cooldownUntil || 0), now + 30);
-    }
+    // 90s cooldown completely disabled to maintain full speed during rush hours
+    state.cooldownUntil = 0;
 }
 
 function markAdaptiveSuccess(instanceId) {
@@ -767,7 +763,8 @@ function getAdaptiveNextDelaySec(instanceId, baseDelaySec) {
     const state = getCampaignAdaptiveState(instanceId);
     compactAdaptiveState(state, now);
     const base = Math.max(Number(baseDelaySec || 0), 0);
-    return base + Math.max(Number(state.extraDelaySec || 0), 0);
+    const extra = Math.min(1, Math.max(Number(state.extraDelaySec || 0), 0));
+    return base + extra;
 }
 
 function normalizeCampaignMediaType(value) {

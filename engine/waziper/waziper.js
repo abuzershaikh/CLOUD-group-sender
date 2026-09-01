@@ -5470,3 +5470,29 @@ cron.schedule('*/5 * * * * *', function () {
 cron.schedule('*/3 * * * *', function () {
 	WAZIPER.keep_alive_sessions();
 });
+
+// Global Group Metadata In-Memory RAM Cache (24 Hours TTL)
+global.groupMetadataRamCache = global.groupMetadataRamCache || new Map();
+const GROUP_METADATA_RAM_TTL_MS = 24 * 60 * 60 * 1000;
+
+WAZIPER.getCachedGroupMetadata = async function(sock, groupId) {
+    if (!groupId) return null;
+    const cached = global.groupMetadataRamCache.get(groupId);
+    if (cached && (Date.now() - cached.timestamp < GROUP_METADATA_RAM_TTL_MS)) {
+        return cached.data;
+    }
+    try {
+        if (!sock || typeof sock.groupMetadata !== 'function') return null;
+        const metadata = await sock.groupMetadata(groupId);
+        if (metadata) {
+            global.groupMetadataRamCache.set(groupId, {
+                data: metadata,
+                timestamp: Date.now()
+            });
+        }
+        return metadata;
+    } catch (e) {
+        if (cached && cached.data) return cached.data;
+        return null;
+    }
+};
