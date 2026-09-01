@@ -586,15 +586,16 @@ async function sendQueuedCampaignRecipient(queueRow) {
     }
 
     if (forwardSourceMessage) {
-        console.log('🔄 [FORWARD] Attempting to forward message:', {
-            chatId: chatId,
-            isGroup: chatId.includes('@g.us'),
-            sourceKey: forwardSourceMessage.key,
-            messageType: forwardSourceMessageType || Object.keys(forwardSourceMessage.message || {})[0]
-        });
-        
-        // Direct session lookup from RAM - no waitForSessionReady needed
-        const client = WAZIPER.sessions[queueRow.instance_id];
+        // Direct session lookup with 3s grace period for reconnecting sockets
+        let client = WAZIPER.sessions[queueRow.instance_id];
+        if (!client || !client.user) {
+            for (let w = 0; w < 3; w++) {
+                await Common.sleep(1000);
+                client = WAZIPER.sessions[queueRow.instance_id];
+                if (client && client.user) break;
+            }
+        }
+
         if (!client || !client.user) {
             const errorMsg = `Forward failed: session not active for ${queueRow.instance_id}`;
             console.error('❌ [FORWARD]', errorMsg);
@@ -608,12 +609,6 @@ async function sendQueuedCampaignRecipient(queueRow) {
                 force: true 
             });
             
-            console.log('✅ [FORWARD] Success:', {
-                chatId: chatId,
-                messageId: result?.key?.id,
-                timestamp: result?.messageTimestamp
-            });
-            
             return { 
                 status: 1, 
                 type: 'api', 
@@ -622,12 +617,13 @@ async function sendQueuedCampaignRecipient(queueRow) {
                 messageId: result?.key?.id
             };
         } catch (sendError) {
+            const errText = sendError?.message || sendError?.output?.payload?.message || String(sendError || 'Unknown forward send error');
             console.error('❌ [FORWARD] Send failed:', {
-                error: sendError.message,
+                error: errText,
                 chatId: chatId,
                 sourceKey: forwardSourceMessage.key
             });
-            throw new Error(`Forward send failed: ${sendError.message}`);
+            throw new Error(`Forward send failed: ${errText}`);
         }
     }
 
@@ -1056,25 +1052,32 @@ async function processQueuedCampaignRow(queueRow) {
                     recipients: JSON.stringify(recipients),
                 };
 
+                const shouldFlushBatch = isCompleted || (currentIndex % 15 === 0) || (failedCount > 0);
+                const batchQueueData = {
+                    sent_count: sentCount,
+                    failed_count: failedCount,
+                    current_index: currentIndex,
+                    status: nextStatus,
+                    next_run_at: isCompleted ? 0 : Common.time(),
+                    changed: Common.time(),
+                };
+                if (shouldFlushBatch) {
+                    batchQueueData.recipients = JSON.stringify(recipients);
+                }
+
                 await Common.db_update('sp_android_campaign_queue', [
-                    {
-                        sent_count: sentCount,
-                        failed_count: failedCount,
-                        current_index: currentIndex,
-                        recipients: JSON.stringify(recipients),
-                        status: nextStatus,
-                        next_run_at: isCompleted ? 0 : Common.time(),
-                        changed: Common.time(),
-                    },
+                    batchQueueData,
                     { ids: queueRow.ids }
                 ]);
 
-                await updateQueuedCampaignHistory(updatedRow, {
-                    status: nextStatus,
-                    items: recipients,
-                    sent_count: sentCount,
-                    failed_count: failedCount,
-                });
+                if (shouldFlushBatch) {
+                    await updateQueuedCampaignHistory(updatedRow, {
+                        status: nextStatus,
+                        items: recipients,
+                        sent_count: sentCount,
+                        failed_count: failedCount,
+                    });
+                }
 
                 if (isCompleted) {
                     return;
@@ -1274,25 +1277,32 @@ async function processQueuedCampaignRow(queueRow) {
                 recipients: JSON.stringify(recipients),
             };
 
+            const shouldFlushSeq = isCompleted || (burstSentCount >= CAMPAIGN_BURST_SEND_LIMIT) || (nextIndex % 15 === 0) || (failedCount > 0);
+            const seqQueueData = {
+                sent_count: sentCount,
+                failed_count: failedCount,
+                current_index: nextIndex,
+                status: nextStatus,
+                next_run_at: isCompleted ? 0 : Common.time(),
+                changed: Common.time(),
+            };
+            if (shouldFlushSeq) {
+                seqQueueData.recipients = JSON.stringify(recipients);
+            }
+
             await Common.db_update('sp_android_campaign_queue', [
-                {
-                    sent_count: sentCount,
-                    failed_count: failedCount,
-                    current_index: nextIndex,
-                    recipients: JSON.stringify(recipients),
-                    status: nextStatus,
-                    next_run_at: isCompleted ? 0 : Common.time(),
-                    changed: Common.time(),
-                },
+                seqQueueData,
                 { ids: queueRow.ids }
             ]);
 
-            await updateQueuedCampaignHistory(updatedQueueRow, {
-                status: nextStatus,
-                items: recipients,
-                sent_count: sentCount,
-                failed_count: failedCount,
-            });
+            if (shouldFlushSeq) {
+                await updateQueuedCampaignHistory(updatedQueueRow, {
+                    status: nextStatus,
+                    items: recipients,
+                    sent_count: sentCount,
+                    failed_count: failedCount,
+                });
+            }
 
             if (isCompleted) {
                 return;
