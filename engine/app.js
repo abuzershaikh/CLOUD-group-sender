@@ -2282,12 +2282,7 @@ WAZIPER.app.all('/api/create_instance', WAZIPER.cors, async (req, res) => {
 
         // âœ… FIX: Also create session record in sp_whatsapp_sessions
         // This is required for /get_qrcode to work properly
-        const sessionData = {
-            instance_id: instance_id,
-            team_id: team.id,
-            status: 1,
-            data: JSON.stringify({})
-        };
+        const sessionData = { instance_id: instance_id, team_id: team.id, status: 0, data: JSON.stringify({}) };
 
         await Common.db_insert('sp_whatsapp_sessions', sessionData);
 
@@ -3945,10 +3940,16 @@ WAZIPER.app.all('/api/campaigns/retry_failed', WAZIPER.cors, async (req, res) =>
             return res.json({ status: 'error', message: 'Authentication failed. Invalid access_token.' });
         }
 
-        const queueRow = await Common.db_get('sp_android_campaign_queue', [
+        let queueRow = await Common.db_get('sp_android_campaign_queue', [
             { history_ids: campaign_id },
             { team_id: team.id }
         ]);
+        if (!queueRow) {
+            queueRow = await Common.db_get('sp_android_campaign_queue', [
+                { ids: campaign_id },
+                { team_id: team.id }
+            ]);
+        }
 
         if (!queueRow) {
             return res.json({
@@ -4070,10 +4071,16 @@ WAZIPER.app.all('/api/campaigns/stop', WAZIPER.cors, async (req, res) => {
             return res.json({ status: 'error', message: 'Authentication failed. Invalid access_token.' });
         }
 
-        const queueRow = await Common.db_get('sp_android_campaign_queue', [
+        let queueRow = await Common.db_get('sp_android_campaign_queue', [
             { history_ids: campaign_id },
             { team_id: team.id }
         ]);
+        if (!queueRow) {
+            queueRow = await Common.db_get('sp_android_campaign_queue', [
+                { ids: campaign_id },
+                { team_id: team.id }
+            ]);
+        }
 
         if (!queueRow) {
             return res.json({ status: 'error', message: 'Campaign queue not found for this workspace' });
@@ -4117,10 +4124,16 @@ WAZIPER.app.all('/api/campaigns/start', WAZIPER.cors, async (req, res) => {
             return res.json({ status: 'error', message: 'Authentication failed. Invalid access_token.' });
         }
 
-        const queueRow = await Common.db_get('sp_android_campaign_queue', [
+        let queueRow = await Common.db_get('sp_android_campaign_queue', [
             { history_ids: campaign_id },
             { team_id: team.id }
         ]);
+        if (!queueRow) {
+            queueRow = await Common.db_get('sp_android_campaign_queue', [
+                { ids: campaign_id },
+                { team_id: team.id }
+            ]);
+        }
 
         if (!queueRow) {
             return res.json({ status: 'error', message: 'Campaign queue not found for this workspace' });
