@@ -1,10 +1,24 @@
-.env
+# Node
 node_modules/
-backend/assets/uploads/
-engine/files/
-engine/sessions/
-engine/cache/
-*.zip
-*.tar.gz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sessions & Logs
+sessions/
+sessions*/
+*.log
 *.bak
-*.bak_*
+*.bak*
+*.backup*
+*.backup
+
+# PHP Writable & Sessions
+backend/writable/session/
+backend/writable/cache/
+backend/writable/logs/
+backend/writable/debugbar/
+
+# Misc
+.DS_Store
+Thumbs.db
