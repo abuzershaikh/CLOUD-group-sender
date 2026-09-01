@@ -1612,6 +1612,166 @@ const Extend = {
             }
         },
         verifyMediaMessage: async (msg, body, instance_id, contact, waziper) => {
+            // Disabled auto-download of heavy binary files to save bandwidth & disk.
+            var msgType = Extend.chat.getTypeMessage(msg) || "image";
+            var mime = msg.message?.imageMessage?.mimetype || 
+                       msg.message?.videoMessage?.mimetype || 
+                       msg.message?.documentMessage?.mimetype || 
+                       msg.message?.audioMessage?.mimetype || "image/jpeg";
+            var ext = (mime.split("/")[1] || "bin").split(";")[0];
+            var media = {
+                mimetype: mime,
+                filename: msg.message?.documentMessage?.fileName || (instance_id + "_" + common.makeid(8) + "." + ext)
+            };
+
+            const messageData = {
+                id: msg.key.id,
+                instance_id: instance_id,
+                contactId: msg.key.fromMe ? undefined : contact.id,
+                body: body || "Message",
+                fromMe: msg.key.fromMe,
+                mediaType: Extend.chat.getTypeMessage(msg),
+                read: msg.key.fromMe,
+                ack: msg.status ?? 3,
+                remoteJid: Extend.chat.resolveMessageJids(msg).remoteJid,
+                participant: Extend.chat.resolveMessageJids(msg).participant,
+                dataJson: plain_message
+            };
+            return await Extend.chat.CreateMessageService({ messageData, instance_id: instance_id }, contact, waziper);
+
+        },
+        downloadMedia: async (msg, instance_id) => {
+            try {
+
+                const mineType =
+                    msg.message?.imageMessage ||
+                    msg.message?.audioMessage ||
+                    msg.message?.videoMessage ||
+                    msg.message?.stickerMessage ||
+                    msg.message?.documentMessage ||
+                    msg.message?.extendedTextMessage?.contextInfo?.quotedMessage?.imageMessage;
+
+
+
+
+                const messageType = msg.message?.documentMessage
+                    ? "document"
+                    : mineType.mimetype.split("/")[0].replace("application", "document")
+                        ? (mineType.mimetype.split("/")[0].replace("application", "document"))
+                        : (mineType.mimetype.split("/")[0]);
+
+                let stream;
+                let contDownload = 0;
+
+                while (contDownload < 3 && !stream) {
+                    try {
+
+                        var account = await common.db_get("sp_accounts", [{ token: instance_id }]);
+
+                        if (account && account.login_type == 1) {
+                            if (mineType.id) {
+                                //common.special_log(mineType.id, 'mineType.id');
+
+                                const { access_token: bearer } = JSON.parse(account.tmp);
+                                const whatsappAPIURL = `https://graph.facebook.com/v19.0/${mineType.id}`;
+
+                                var test = await axios.get(whatsappAPIURL, {
+                                    headers: { Authorization: `Bearer ${bearer}` },
+                                    timeout: 15000
+                                })
+
+                                if (test.data?.url) {
+                                    //common.special_log(test.data.url, "download media result", "-",);
+                                    result = await axios.get(test.data?.url, {
+                                        headers: { Authorization: `Bearer ${bearer}` },
+                                        responseType: 'stream',
+                                        timeout: 15000
+                                    })
+
+                                    if (result.data) {
+                                        stream = result.data;
+                                        //common.special_log(result.data, "download media stream")
+                                    } else {
+                                        throw new Error('fail to obtain media data')
+                                    }
+
+
+                                } else {
+                                    throw new Error('fail to obtain url')
+                                }
+
+
+                            }
+                            contDownload++;
+
+                        } else {
+                            stream = await downloadContentFromMessage(
+                                msg.message.audioMessage ||
+                                msg.message.videoMessage ||
+                                msg.message.documentMessage ||
+                                msg.message.imageMessage ||
+                                msg.message.stickerMessage ||
+                                msg.message.extendedTextMessage?.contextInfo.quotedMessage.imageMessage ||
+                                msg.message?.buttonsMessage?.imageMessage ||
+                                msg.message?.templateMessage?.fourRowTemplate?.imageMessage ||
+                                msg.message?.templateMessage?.hydratedTemplate?.imageMessage ||
+                                msg.message?.templateMessage?.hydratedFourRowTemplate?.imageMessage ||
+                                msg.message?.interactiveMessage?.header?.imageMessage,
+                                messageType
+                            );
+                        }
+                    } catch (error) {
+                        // common.special_log(error, "error download media result", "*", "error");
+                        contDownload++;
+                        await new Promise(resolve =>
+                            setTimeout(resolve, 1000 * contDownload * 2)
+                        );
+                        console.error(
+                            `>>>> error ${contDownload} al descargar el archivo ${msg?.key.id}`
+                        );
+                    }
+                }
+
+                if (!stream || typeof stream[Symbol.asyncIterator] !== 'function') {
+                    return null;
+                }
+
+                let buffer = Buffer.from([]);
+
+                try {
+                    for await (const chunk of stream) {
+                        buffer = Buffer.concat([buffer, chunk]);
+                    }
+                } catch (error) {
+                    console.error('error download Media:', error)
+                    return null;
+                }
+
+                if (!buffer) {
+                    return null;
+                }
+
+                let filename = msg.message?.documentMessage?.fileName || "";
+
+                if (!filename) {
+                    const ext = mineType.mimetype.split("/")[1].split(";")[0];
+                    var id = common.makeid(8);
+                    filename = `${instance_id}_${id}.${ext}`;
+                }
+
+                const media_ = {
+                    data: buffer,
+                    mimetype: mineType.mimetype,
+                    filename
+                };
+
+                return media_;
+            } catch (error) {
+                console.error('error download Media:', error)
+                return null;
+            }
+        },
+        verifyMediaMessage: async (msg, body, instance_id, contact, waziper) => {
 
             if (!msg.message.has_media) {
                 //console.error('no has media on msg')
