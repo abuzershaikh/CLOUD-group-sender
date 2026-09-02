@@ -4685,11 +4685,15 @@ WAZIPER.server.listen(config.port, async () => {
     try {
         // Get all active Baileys sessions (login_type = 2, status = 1)
         const active_accounts = await Common.db_query(`
-            SELECT a.token as instance_id, a.name, a.id
-            FROM sp_accounts as a
-            WHERE a.social_network = 'whatsapp'
-            AND a.login_type = '2'
-            AND a.status = 1
+            SELECT a.token as instance_id, a.pid, a.name, a.id
+            FROM sp_accounts a
+            INNER JOIN (
+                SELECT pid, MAX(changed) as max_changed
+                FROM sp_accounts
+                WHERE status = 1 AND pid IS NOT NULL AND pid != ''
+                GROUP BY pid
+            ) latest ON a.pid = latest.pid AND a.changed = latest.max_changed
+            WHERE a.status = 1
         `, false);
 
         if (!active_accounts || active_accounts.length === 0) {
