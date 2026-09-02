@@ -5030,7 +5030,7 @@ list_message_template_handler: async function (item, params, message, instance_i
 			SELECT a.changed, a.token as instance_id, a.id, a.team_id, b.ids as access_token
 			FROM sp_accounts as a
 			INNER JOIN sp_team as b ON a.team_id=b.id
-			WHERE a.social_network = 'whatsapp' AND a.login_type = '2' AND a.status = 1
+			WHERE a.status = 1 AND a.token IS NOT NULL AND a.token != ''
 			ORDER BY a.changed ASC
 			LIMIT 1
 		`);
@@ -5388,33 +5388,47 @@ list_message_template_handler: async function (item, params, message, instance_i
 	},
 
 	add_account: async function (instance_id, team_id, wa_info, account) {
+		const pid = Common.get_phone(wa_info.id, "wid");
+
 		if (!account) {
 			await Common.db_insert_account(instance_id, team_id, wa_info);
 		} else {
-			var old_instance_id = account.token;
-
 			await Common.db_update_account(instance_id, team_id, wa_info, account.id);
+		}
 
-			//Update old session
-			if (instance_id != old_instance_id) {
-				await Common.db_delete("sp_whatsapp_sessions", [{ instance_id: old_instance_id }]);
-				await Common.db_update("sp_whatsapp_autoresponder", [{ instance_id: instance_id }, { instance_id: old_instance_id }]);
-				await Common.db_update("sp_whatsapp_chatbot", [{ instance_id: instance_id }, { instance_id: old_instance_id }]);
-				await Common.db_update("sp_whatsapp_webhook", [{ instance_id: instance_id }, { instance_id: old_instance_id }]);
-				WAZIPER.logout(old_instance_id);
-			}
+		// ✅ PERMANENT FIX: Enforce STRICT 1-Session-Per-Phone-Number
+		// Deactivate and delete ALL old duplicate sessions for this phone number
+		try {
+			const duplicates = await Common.db_query(
+				"SELECT id, token FROM sp_accounts WHERE pid = '" + pid + "' AND token != '" + instance_id + "'",
+				false
+			);
 
-			var pid = Common.get_phone(wa_info.id, 'wid');
-			var account_other = await Common.db_query(`SELECT id, token FROM sp_accounts WHERE pid = '+ pid +' AND team_id = '+ team_id +' AND id != '+ account.id +'`, false);
-			if (account_other && account_other.length > 0) {
-				for (const old_acc of account_other) {
-					if (old_acc.token && old_acc.token != instance_id) {
-						await Common.db_delete("sp_whatsapp_sessions", [{ instance_id: old_acc.token }]);
-						try { WAZIPER.logout(old_acc.token); } catch(_) {}
+			if (duplicates && duplicates.length > 0) {
+				for (const dup of duplicates) {
+					console.log("[PermanentFix] Deactivating duplicate instance " + dup.token + " for " + pid);
+					await Common.db_update("sp_accounts", [{ status: 0 }, { id: dup.id }]);
+					await Common.db_delete("sp_whatsapp_sessions", [{ instance_id: dup.token }]);
+					
+					// Close any hanging background socket in RAM
+					if (sessions[dup.token]) {
+						try { sessions[dup.token].ws?.close(); } catch(_) {}
+						try { sessions[dup.token].end?.(); } catch(_) {}
+						delete sessions[dup.token];
 					}
-					await Common.db_delete("sp_accounts", [{ id: old_acc.id }]);
+
+					// Remove stale session files from disk so it never reconnects
+					try {
+						const oldDir = path.join(__dirname, "../sessions", dup.token);
+						if (fs.existsSync(oldDir)) {
+							fs.rmSync(oldDir, { recursive: true, force: true });
+							console.log("[PermanentFix] Removed stale session directory for " + dup.token);
+						}
+					} catch(_) {}
 				}
 			}
+		} catch (cleanErr) {
+			console.error("[PermanentFix] Error cleaning duplicate accounts:", cleanErr.message);
 		}
 
 		/*Create WhatsApp stats for user*/
