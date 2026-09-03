@@ -3238,6 +3238,193 @@ WAZIPER.app.get('/api/healthz', (req, res) => {
     });
 });
 
+
+
+// ==========================================
+// 📊 WHATSAPP STATUS SHEET API
+// Returns live row/column status of all instances:
+// Connected, Connecting (Trying), Disconnected (Loss), Logged Out
+// ==========================================
+WAZIPER.app.all(['/api/whatsapp_status_sheet', '/api/instances_status_table'], WAZIPER.cors, async (req, res) => {
+    try {
+        const params = req.method === 'GET' ? req.query : { ...req.query, ...req.body };
+        const access_token = params.access_token;
+
+        if (!access_token) {
+            return res.json({ status: 'error', message: 'Missing access_token' });
+        }
+
+        const team = await Common.db_get("sp_team", [{ ids: access_token }]);
+        if (!team) {
+            return res.json({ status: 'error', message: 'Invalid access_token' });
+        }
+
+        // 1. Fetch all accounts for this team
+        const accounts = await Common.db_query(`
+            SELECT id, token as instance_id, pid, name, status, login_type,
+                   FROM_UNIXTIME(changed) as updated_at
+            FROM sp_accounts
+            WHERE team_id = '${team.id}' AND token IS NOT NULL AND token != ''
+            ORDER BY status DESC, changed DESC
+        `, false) || [];
+
+        let connectedCount = 0;
+        let connectingCount = 0;
+        let disconnectedCount = 0;
+        let loggedOutCount = 0;
+
+        const items = [];
+
+        for (const acc of accounts) {
+            const instanceId = acc.instance_id;
+            const ramSession = WAZIPER.sessions ? WAZIPER.sessions[instanceId] : null;
+
+            let rawPid = String(acc.pid || '').trim();
+            let profileName = String(acc.name || 'WhatsApp Account').trim();
+
+            // Extract clean phone number
+            let cleanPhone = rawPid.replace(/@.*$/, '').replace(/\D/g, '');
+            if (ramSession && ramSession.user && ramSession.user.id) {
+                const ramPhone = String(ramSession.user.id).replace(/@.*$/, '').replace(/\D/g, '');
+                if (ramPhone) cleanPhone = ramPhone;
+                if (ramSession.user.name) profileName = ramSession.user.name;
+            }
+
+            // Format display phone: e.g. +91 72763 70549
+            let displayPhone = cleanPhone;
+            if (cleanPhone.length >= 10) {
+                if (cleanPhone.startsWith('91') && cleanPhone.length === 12) {
+                    displayPhone = '+91 ' + cleanPhone.substring(2, 7) + ' ' + cleanPhone.substring(7);
+                } else if (cleanPhone.startsWith('1') && cleanPhone.length === 11) {
+                    displayPhone = '+1 (' + cleanPhone.substring(1, 4) + ') ' + cleanPhone.substring(4, 7) + '-' + cleanPhone.substring(7);
+                } else {
+                    displayPhone = '+' + cleanPhone;
+                }
+            }
+
+            // Determine Live Status
+            let status = 'disconnected';
+            let statusLabel = 'Connection Lost';
+            let statusColor = '#EF5350'; // Red
+            let wsState = 'NOT_LOADED';
+            let isHealthy = false;
+            let reason = 'Session socket is closed';
+
+            const wsReady = ramSession ? (ramSession.ws?.readyState ?? ramSession.ws?.socket?._readyState) : -1;
+
+            if (ramSession && wsReady === 1 && ramSession.user && ramSession.user.id) {
+                status = 'connected';
+                statusLabel = 'Connected';
+                statusColor = '#25D366'; // Green
+                wsState = 'OPEN';
+                isHealthy = true;
+                reason = 'Socket is active and ready';
+                connectedCount++;
+            } else if (ramSession && wsReady === 0) {
+                status = 'connecting';
+                statusLabel = 'Connecting...';
+                statusColor = '#FFA726'; // Orange
+                wsState = 'CONNECTING';
+                isHealthy = false;
+                reason = 'Handshake in progress';
+                connectingCount++;
+            } else if (Number(acc.status) === 1) {
+                // Should be active, but socket dropped
+                status = 'disconnected';
+                statusLabel = 'Connection Lost';
+                statusColor = '#EF5350'; // Red
+                wsState = wsReady === 2 ? 'CLOSING' : (wsReady === 3 ? 'CLOSED' : 'NOT_LOADED');
+                isHealthy = false;
+                reason = 'Connection lost, tap reconnect';
+                disconnectedCount++;
+            } else {
+                status = 'logged_out';
+                statusLabel = 'Logged Out';
+                statusColor = '#9E9E9E'; // Grey
+                wsState = 'LOGGED_OUT';
+                isHealthy = false;
+                reason = 'Logged out by user or server';
+                loggedOutCount++;
+            }
+
+            items.push({
+                instance_id: instanceId,
+                phone_number: cleanPhone || 'Unknown',
+                display_phone: displayPhone || 'No Phone',
+                profile_name: profileName,
+                status: status,
+                status_label: statusLabel,
+                status_color: statusColor,
+                ws_state: wsState,
+                is_healthy: isHealthy,
+                account_status: Number(acc.status || 0),
+                last_updated: acc.updated_at || '',
+                reason: reason
+            });
+        }
+
+        return res.json({
+            status: 'success',
+            data: {
+                total_instances: items.length,
+                connected_count: connectedCount,
+                connecting_count: connectingCount,
+                disconnected_count: disconnectedCount,
+                logged_out_count: loggedOutCount,
+                items: items
+            }
+        });
+    } catch (error) {
+        console.error('Error in /api/whatsapp_status_sheet:', error);
+        return res.json({
+            status: 'error',
+            message: 'Failed to fetch status sheet: ' + error.message
+        });
+    }
+});
+
+// Single Instance Reconnect API
+WAZIPER.app.all('/api/reconnect_instance', WAZIPER.cors, async (req, res) => {
+    try {
+        const params = req.method === 'GET' ? req.query : { ...req.query, ...req.body };
+        const access_token = params.access_token;
+        const instance_id = params.instance_id;
+
+        if (!access_token || !instance_id) {
+            return res.json({ status: 'error', message: 'Missing access_token or instance_id' });
+        }
+
+        const team = await Common.db_get("sp_team", [{ ids: access_token }]);
+        if (!team) {
+            return res.json({ status: 'error', message: 'Invalid access_token' });
+        }
+
+        console.log(`[ReconnectApi] Reconnecting instance ${instance_id} for team ${team.id}...`);
+
+        // Close any dead socket in RAM
+        if (WAZIPER.sessions && WAZIPER.sessions[instance_id]) {
+            try { WAZIPER.sessions[instance_id].ws?.close(); } catch(_) {}
+            delete WAZIPER.sessions[instance_id];
+        }
+
+        // Restart socket session
+        await WAZIPER.session(instance_id, false);
+
+        return res.json({
+            status: 'success',
+            message: 'Reconnection initiated successfully',
+            instance_id: instance_id
+        });
+    } catch (error) {
+        console.error('Error in /api/reconnect_instance:', error);
+        return res.json({
+            status: 'error',
+            message: 'Failed to reconnect instance: ' + error.message
+        });
+    }
+});
+
+
 WAZIPER.app.all('/api/instances', WAZIPER.cors, async (req, res) => {
     try {
         const params = req.method === 'GET' ? req.query : { ...req.query, ...req.body };
