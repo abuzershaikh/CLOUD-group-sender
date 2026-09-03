@@ -3264,7 +3264,7 @@ WAZIPER.app.all(['/api/whatsapp_status_sheet', '/api/instances_status_table'], W
             SELECT id, token as instance_id, pid, name, status, login_type,
                    FROM_UNIXTIME(changed) as updated_at
             FROM sp_accounts
-            WHERE team_id = '${team.id}' AND token IS NOT NULL AND token != ''
+            WHERE team_id = '${team.id}' AND token IS NOT NULL AND token != '' AND (status = 1 OR (pid IS NOT NULL AND pid != ''))
             ORDER BY status DESC, changed DESC
         `, false) || [];
 
@@ -3282,10 +3282,10 @@ WAZIPER.app.all(['/api/whatsapp_status_sheet', '/api/instances_status_table'], W
             let rawPid = String(acc.pid || '').trim();
             let profileName = String(acc.name || 'WhatsApp Account').trim();
 
-            // Extract clean phone number
-            let cleanPhone = rawPid.replace(/@.*$/, '').replace(/\D/g, '');
+            // Extract clean phone number (split ':' to remove WhatsApp device suffix like :54)
+            let cleanPhone = rawPid.split('@')[0].split(':')[0].replace(/\D/g, '');
             if (ramSession && ramSession.user && ramSession.user.id) {
-                const ramPhone = String(ramSession.user.id).replace(/@.*$/, '').replace(/\D/g, '');
+                const ramPhone = String(ramSession.user.id).split('@')[0].split(':')[0].replace(/\D/g, '');
                 if (ramPhone) cleanPhone = ramPhone;
                 if (ramSession.user.name) profileName = ramSession.user.name;
             }
