@@ -1,3 +1,4 @@
+global.sessionCreationLocks = global.sessionCreationLocks || new Map();
 /**
  * WAZIPER - WhatsApp Integration Module
  * Core module for managing WhatsApp connections using Baileys v6.7.21
