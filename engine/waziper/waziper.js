@@ -540,7 +540,7 @@ const WAZIPER = {
 				    DisconnectReason.connectionClosed == statusCode ||
 				    DisconnectReason.connectionLost == statusCode ||
 				    DisconnectReason.timedOut == statusCode ||
-				    statusCode == 405 || statusCode == 428 || statusCode == 500 || statusCode == 503 || statusCode == 515) {
+				    statusCode == 405 || statusCode == 428 || statusCode == 440 || statusCode == 500 || statusCode == 503 || statusCode == 515) {
 
 					// ✅ CRITICAL: Check if this is an authenticated session before reconnecting
 					// For NEW unauthenticated sessions, do NOT reconnect - let pending cleanup handle them
@@ -5105,7 +5105,7 @@ list_message_template_handler: async function (item, params, message, instance_i
 
 				// If you need to handle expired QR codes, use the new_sessions timeout mechanism
 				// which is already implemented in lines 3464-3473 below
-			}, wsstatus == 3);
+			}, false); // ✅ FIX: NEVER pass reset=true in health check (preserves creds.json)
 		}
 
 		// ✅ CRITICAL FIX: Pending Session Cleanup (QR Code Expiration)
